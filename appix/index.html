@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Appix</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('#menu ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+			$(".rslides").responsiveSlides({
+			  auto: true,             // Boolean: Animate automatically, true or false
+			  speed: 500,            // Integer: Speed of the transition, in milliseconds
+			  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+			  pager: false,           // Boolean: Show pager, true or false
+			  nav: true,             // Boolean: Show navigation, true or false
+			  random: false,          // Boolean: Randomize the order of the slides, true or false
+			  pause: false,           // Boolean: Pause on hover, true or false
+			  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+			  prevText: "",   // String: Text for the "previous" button
+			  nextText: "",       // String: Text for the "next" button
+			  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+			  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+			  manualControls: "",     // Selector: Declare custom pager navigation
+			  namespace: "rslides",   // String: Change the default namespace used
+			  before: function(){},   // Function: Before callback
+			  after: function(){}     // Function: After callback
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<a href="#"><img src="img/logo.png" alt="APPIX" class="logo"></a>
+			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing...</h1>
+			<p>
+				<a href="#"><img src="img/ico-twitter.png" alt="twitter"></a>
+				<a href="#"><img src="img/ico-fb.png" alt="facebook"></a>
+			</p>
+		</div>
+		<div id="content-wrapper">
+			<div id="menu">
+				<ul>
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Shortcodes</a></li>
+					<li><a href="#">Contacts</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</div>
+			<div id="content-main">
+				<div class="slogan-main">
+					<div class="slogan">
+						<div>
+							<h2><img src="img/ico-1.png" alt="">Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+						</div>
+					</div>
+					<div class="slogan">
+						<div>
+							<h2><img src="img/ico-2.png" alt="">Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit voluptatem unde</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+						</div>
+					</div>
+					<div class="slogan">
+						<div>
+							<h2><img src="img/ico-2.png" alt="">Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit voluptatem unde</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+						</div>
+					</div>										
+				</div>
+				<div class="features">
+				<ul class="rslides">
+				  <li><img src="img/slide-1.jpg" alt=""></li>
+				  <li><img src="img/slide-2.jpg" alt=""></li>
+				  <li><img src="img/slide-3.jpg" alt=""></li>
+				</ul>
+				</div>
+				<div class="service-main">
+					<div class="service">
+						<div>
+							<h2>Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+							<p><a href=""><img src="img/read-more-orange.png" alt=""></a></p>
+						</div>
+					</div>
+					<div class="service">
+						<div>
+							<h2>Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+							<p><a href=""><img src="img/read-more-gray.png" alt=""></a></p>
+						</div>
+					</div>
+					<div class="service">
+						<div>
+							<h2>Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+							<p><a href=""><img src="img/read-more-orange.png" alt=""></a></p>
+						</div>
+					</div>
+					<div class="service">
+						<div>
+							<h2>Lorem Ipsum Dolir Sit Lorem Ipsum Dolir Sit</h2>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+							<p><a href=""><img src="img/read-more-gray.png" alt=""></a></p>
+						</div>
+					</div>															
+				</div>
+				<div class="work-with-us">
+					<h2>Dolor sit amet, consectetur adipisicing elit, sed do elis. Lorem ipsum dolor sit amet, elit, sed do ipsum dolor... </h2>
+					<a href="#"><img src="img/work-btn.png" alt=""></a>
+				</div>
+				<div id="bottom-content-block">
+					<div id="bottom-content-left">
+						<h2>CUSTOMERS TESTIMONIALS</h2>
+						<div class="review">
+							<div class="review-head">
+								<img src="img/review-author.jpg" alt="">
+								<h3>John Smith</h3>
+								<p>App Designer</p>
+							</div>
+							<p class="review-content">&#8220; Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, atis et quasi architecto beatae vitae dicta sunt explicabo atis et quasi archite.&#8221;</p>
+						</div>
+						<div class="review">
+							<div class="review-head">
+								<img src="img/review-author.jpg" alt="">
+								<h3>Christopher Din</h3>
+								<p>App Developer</p>
+							</div>
+							<p class="review-content">&#8220; Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, atis et quasi architecto beatae vitae dicta sunt explicabo atis et quasi architecto beatae vitae dicta sunt explicabo.&#8221;</p>
+						</div>						
+					</div>
+					<div id="bottom-content-right">
+						<h2>LATEST NEWS FROM APPIX BLOG</h2>
+						<div class="news-block">
+							<a href="#"><img src="img/news-img.jpg" alt=""></a>
+							<h3><a href="#">Lorem Ipsum Dolor Sit Amet</a></h3>
+							<p>March, 28th 2011<br><span>Written by Eric</span></p>
+						</div>
+						<div class="news-block">
+							<a href="#"><img src="img/news-img.jpg" alt=""></a>
+							<h3><a href="#">Voluptatem atis et quasi</a></h3>
+							<p>March, 28th 2011<br><span>Written by Christine</span></p>
+						</div>
+						<div class="news-block">
+							<a href="#"><img src="img/news-img.jpg" alt=""></a>
+							<h3><a href="#">Lorem Ipsum Dolor Sit Amet</a></h3>
+							<p>March, 28th 2011<br><span>Written by Eric</span></p>
+						</div>												
+					</div>
+				</div>
+			</div>
+			<div id="footer-main">
+				<div id="footer-block-left">
+					<h3>Lorem Ipsum Dolir Sit</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Gorgeous design with time and attention dedicated to o laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				</div>
+				<div id="footer-block-right">
+					<h3>Latest news from Appix Blog</h3>
+					<ul>
+						<li><a href="#">Sed ut perspiciatis unde omnis iste </a></li>
+						<li><a href="#">natus error sit voluptatem accusantium</a></li>
+						<li><a href="#">ipsum dolor sit amet, consectetur </a></li>
+						<li><a href="#">adipisicing elit, sed do eiusmod tempor </a></li>
+						<li><a href="#">incididunt ut labore et dolore magna</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="footer-copy">
+				<a href="#"><img src="img/footer-logo.png" alt=""></a>
+				<p>&copy; 2011 Appix. All Rights Reserved. Powered by <a href="#">WordPress</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
