@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Новые билеты ПДД</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №26</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+                <div class="dropdown" >
+      <button class="dropbtn">RU</button>
+      <div class="dropdown-content">
+      <a href="#">RU</a>
+      <a href="26kg.html">KG</a>
+
+      </div>
+    </div>
+
+
+
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+                <div class="menu-block-bilets">Выберите билет:</div>
+                <div class="menu-block-bilets-con">Категория ABM</div>
+                <button type="button" onclick="openStuff();" class="btn btn-outline-secondary">Выбрать рандомый билет</button>
+                           <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                       <span class="span-bilet" id="select-bilet30"><span> <a href="30.html"><big><strong>30</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+        <div></div>
+    </div>
+    <script src="script/site.min.js?ver=1.0"></script>
+    <script src="script/HintsRu.min.js?ver=1.0"></script>
+    <script>
+        var MyTime = 0;
+        var MyWrongs = 0;
+        var MySocialText = "";
+        var category_abmcd = 0;
+        var g_complitequests = 0;
+        var g_pause_active = false;
+        var res_win = 0;
+        var res_score_count_id;
+        var res_score = 0;
+        var res_score_final = 0;
+        var res_star = 0;
+        var g_registered = 0;
+        var g_global_rezim = 5;
+        var q_length = 20;
+        var q_id = [];
+        var q_idb = [];
+        var q_img = [];
+        var q_img_src = [];
+        var q_img_name = [];
+        var q_nq = [];
+        var q_quest = [];
+        var q_tips = [];
+        var q_qnum_id = -1;
+        var a_length = [];
+        var a_t = [];
+        var a_answers = [];
+        var q_nq_done = [];
+        var q_done = false;
+        var q_length_p5 = 0;
+        var q_id_p5 = [];
+        var q_idb_p5 = [];
+        var q_img_p5 = [];
+        var q_img_src_p5 = [];
+        var q_img_name_p5 = [];
+        var q_nq_p5 = [];
+        var q_quest_p5 = [];
+        var q_tips_p5 = [];
+        var q_qnum_id_p5 = -1;
+        var a_length_p5 = [];
+        var a_t_p5 = [];
+        var a_answers_p5 = [];
+        var q_nq_done_p5 = [];
+        var q_done_p5 = false;
+        var g_wrongs = [];
+        var g_wronrs_cur_counter = 0;
+        var g_wrongs_counter = 0;
+        var g_rights_counter = 0;
+        var g_global_update = 1;
+        var q_block_mistake = [];
+        var d_click_answer = 0;
+        var g_mistake = 0;
+        var g_block_p5 = 0;
+        var end_plus_exam = true;
+        var plus_end_mistake = false;
+        for (i = 0; i < q_length; i++) {
+            a_answers[i] = [];
+        }q_id[0] = 1;
+        q_idb[0] = 26;
+        q_img[0] = 1;
+        q_img_name[0] = "20_7.png";
+        q_nq[0] = 1;
+        q_quest[0] = "При движении прямо Вы:";
+        q_tips[0] = " Вы приближаетесь к регулируемому перекрестку и можете проехать его без остановки, поскольку включен зеленый сигнал светофора (п.6.2). Выполнять требование знака 2.5 «Движение без остановки запрещено» Вы должны только в том случае, если светофор будет выключен или переведен в режим желтого мигающего сигнала (п.13.3).";
+        a_t[0] = "1";
+        a_length[0] = "3";
+        a_answers[0][0] = " Должны остановиться перед стоп-линией.";
+        a_answers[0][1] = " Можете продолжить движение через перекресток без остановки.";
+        a_answers[0][2] = " Должны уступить дорогу транспортным средствам, движущимся с других направлений.";
+        q_id[1] = 2;
+        q_idb[1] = 26;
+        q_img[1] = 1;
+        q_img_name[1] = "20_8.png";
+        q_nq[1] = 2;
+        q_quest[1] = "Вы намерены повернуть направо. Ваши действия?";
+        q_tips[1] = " На данном перекрестке Вы не должны уступать дорогу мотоциклу, находящемуся справа (п.13.10), поскольку, поворачивая направо, не пересекаете путь его движения (п.1.2 термин «Уступить дорогу (не создавать помех)»). Перед легковым автомобилем, поворачивающим налево, Вы имеете преимущество (п.13.12).";
+        a_t[1] = "0";
+        a_length[1] = "3";
+        a_answers[1][0] = " Проедете перекресток первым.";
+        a_answers[1][1] = " Уступите дорогу легковому автомобилю.";
+        a_answers[1][2] = " Уступите дорогу обоим транспортным средствам.";
+        q_id[2] = 3;
+        q_idb[2] = 26;
+        q_img[2] = 1;
+        q_img_name[2] = "20_9.png";
+        q_nq[2] = 3;
+        q_quest[2] = "Кому Вы обязаны уступить дорогу при повороте налево?";
+        q_tips[2] = " Двигаясь на данном перекрестке по направлению главной дороги (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги»), для определения очередности проезда с трамваем А и легковым автомобилем Вы должны руководствоваться правилами проезда перекрестков равнозначных дорог (п.13.10). В соответствии с ними преимущество имеет трамвай А (п.13.11). По этим же правилам легковой автомобиль, находящийся от Вас слева, обязан уступить дорогу. Также уступает Вам дорогу и трамвай Б, движущийся по второстепенной дороге (п.13.9).";
+        a_t[2] = "2";
+        a_length[2] = "4";
+        a_answers[2][0] = " Трамваям А и Б.";
+        a_answers[2][1] = " Трамваю А и легковому автомобилю.";
+        a_answers[2][2] = " Только трамваю А.";
+        a_answers[2][3] = " Никому.";
+        q_id[3] = 4;
+        q_idb[3] = 26;
+        q_img[3] = 1;
+        q_img_name[3] = "20_10.png";
+        q_nq[3] = 4;
+        q_quest[3] = "Вы намерены проехать перекресток в прямом направлении. Ваши действия?";
+        q_tips[3] = " Несмотря на разрешающий движение сигнал светофора, Вы обязаны уступить дорогу автомобилю с включенными проблесковым маячком и специальным звуковым сигналом, движущемуся по пересекаемой дороге (пп.3.1-3.3). Перед встречным грузовым автомобилем Вы имеете преимущество, так как он поворачивает налево (п.13.4).";
+        a_t[3] = "2";
+        a_length[3] = "4";
+        a_answers[3][0] = " Проедете перекресток первым.";
+        a_answers[3][1] = " Уступите дорогу только встречному автомобилю.";
+        a_answers[3][2] = " Уступите дорогу только автомобилю с включенными проблесковым маячком и специальным звуковым сигналом.";
+        a_answers[3][3] = " Уступите дорогу обоим транспортным средствам.";
+        q_id[4] = 5;
+        q_idb[4] = 26;
+        q_img[4] = 1;
+        q_img_name[4] = "20_11.png";
+        q_nq[4] = 5;
+        q_quest[4] = "Кому Вы должны уступить дорогу при повороте направо?";
+        q_tips[4] = " В данной ситуации Вы должны уступить дорогу как пешеходу, переходящему ее по нерегулируемому пешеходному переходу (п.14.1), так и пешеходам справа, переходящим проезжую часть, на которую Вы поворачиваете на перекрестке (п.13.1).";
+        a_t[4] = "2";
+        a_length[4] = "3";
+        a_answers[4][0] = " Только пешеходу, переходящему проезжую часть по нерегулируемому пешеходному переходу.";
+        a_answers[4][1] = " Только пешеходам, переходящим проезжую часть, на которую Вы поворачиваете.";
+        a_answers[4][2] = " Всем пешеходам.";
+        q_id[5] = 6;
+        q_idb[5] = 26;
+        q_img[5] = 1;
+        q_img_name[5] = "20_12.png";
+        q_nq[5] = 6;
+        q_quest[5] = "Как Вам следует поступить при выполнении разворота?";
+        q_tips[5] = " На данном перекрестке неравнозначных дорог легковой автомобиль, также как и Вы, находится на главной дороге (знак 2.1 «Главная дорога»), поэтому, разворачиваясь, Вы должны уступить ему дорогу (п.13.12). По отношению к грузовому автомобилю Вы пользуетесь преимуществом, так как он находится на второстепенной дороге (п.13.9).";
+        a_t[5] = "1";
+        a_length[5] = "3";
+        a_answers[5][0] = " Проехать перекресток первым.";
+        a_answers[5][1] = " Уступить дорогу только легковому автомобилю.";
+        a_answers[5][2] = " Уступить дорогу обоим транспортным средствам.";
+        q_id[6] = 7;
+        q_idb[6] = 26;
+        q_img[6] = 1;
+        q_img_name[6] = "20_13.png";
+        q_nq[6] = 7;
+        q_quest[6] = "Вы намерены развернуться. Ваши действия?";
+        q_tips[6] = " При таком сигнале регулировщика движение разрешено Вам и водителю легкового автомобиля, поворачивающему направо (п.6.10). В этой ситуации очередность движения правилами проезда перекрестков не оговорена, поэтому дорогу должен уступить водитель, к которому ТС приближается справа (п.8.8). Таким ТС будет для Вас легковой автомобиль после того, как Вы начнете движение и выедете на перекресток. Завершая разворот, Вы должны уступить дорогу легковому автомобилю.";
+        a_t[6] = "1";
+        a_length[6] = "3";
+        a_answers[6][0] = " Проедете перекресток первым.";
+        a_answers[6][1] = " Выполните разворот, уступив дорогу легковому автомобилю.";
+        a_answers[6][2] = " Дождетесь, когда регулировщик опустит правую руку.";
+        q_id[7] = 8;
+        q_idb[7] = 26;
+        q_img[7] = 1;
+        q_img_name[7] = "20_14.png";
+        q_nq[7] = 8;
+        q_quest[7] = "Кому Вы должны уступить дорогу при движении в прямом направлении?";
+        q_tips[7] = " На данном перекрестке равнозначных дорог Вы должны уступить дорогу только трамваю, имеющему преимущество, а водитель легкового автомобиля, находящегося слева, обязан уступить Вам дорогу (п.13.10).";
+        a_t[7] = "0";
+        a_length[7] = "3";
+        a_answers[7][0] = " Только трамваю.";
+        a_answers[7][1] = " Только легковому автомобилю.";
+        a_answers[7][2] = " Обоим транспортным средствам.";
+        q_id[8] = 9;
+        q_idb[8] = 26;
+        q_img[8] = 1;
+        q_img_name[8] = "20_15.png";
+        q_nq[8] = 9;
+        q_quest[8] = "Как Вам следует поступить при повороте налево?";
+        q_tips[8] = " Проблесковый маячок оранжевого или желтого цвета преимущества в движении не дает (п.3.5). Поэтому, двигаясь по главной дороге (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги»), Вы можете проехать данный перекресток неравнозначных дорог первым. Легковой автомобиль и грузовой автомобиль с маячком находятся на второстепенных дорогах и должны уступить Вам дорогу (п.13.9).";
+        a_t[8] = "0";
+        a_length[8] = "3";
+        a_answers[8][0] = " Проехать перекресток первым.";
+        a_answers[8][1] = " Уступить дорогу только грузовому автомобилю с включенным проблесковым маячком.";
+        a_answers[8][2] = " Уступить дорогу обоим транспортным средствам.";
+        q_id[9] = 10;
+        q_idb[9] = 26;
+        q_img[9] = 1;
+        q_img_name[9] = "20_16.png";
+        q_nq[9] = 10;
+        q_quest[9] = "Вы намерены повернуть налево. Ваши действия?";
+        q_tips[9] = " Зеленый сигнал светофора разрешает Вам поворот налево (п.6.2). Движение трамвая на данном перекрестке регулируется светофором одноцветной сигнализации в виде буквы «Т». Учитывая, что при таком сигнале движение трамваю запрещено (п.6.8), Вы можете проехать перекресток первым.";
+        a_t[9] = "2";
+        a_length[9] = "3";
+        a_answers[9][0] = " Уступите дорогу трамваю.";
+        a_answers[9][1] = " Дождетесь разрешающего сигнала специального светофора и, пропустив трамвай, повернете налево.";
+        a_answers[9][2] = " Проедете перекресток первым.";
+        q_id[10] = 11;
+        q_idb[10] = 26;
+        q_img[10] = 1;
+        q_img_name[10] = "20_17.png";
+        q_nq[10] = 11;
+        q_quest[10] = "Кому Вы обязаны уступить дорогу при повороте налево?";
+        q_tips[10] = " Поворачивая налево на данном перекрестке, необходимо уступить дорогу не только встречному велосипедисту (п.13.12), но и пешеходам, переходящим проезжую часть дороги, на которую Вы поворачиваете (п.13.1).";
+        a_t[10] = "1";
+        a_length[10] = "3";
+        a_answers[10][0] = " Только пешеходам.";
+        a_answers[10][1] = " Пешеходам и велосипедисту.";
+        a_answers[10][2] = " Никому.";
+        q_id[11] = 12;
+        q_idb[11] = 26;
+        q_img[11] = 1;
+        q_img_name[11] = "20_18.png";
+        q_nq[11] = 12;
+        q_quest[11] = "В каком случае Вы должны будете уступить дорогу автомобилю милиции?";
+        q_tips[11] = " Хотя Вы двигаетесь по дороге с твердым покрытием, которая является главной по отношению к примыкающей слева грунтовой дороге, Вам придется уступить дорогу выезжающему со второстепенной дороги автомобилю, если на нем будут одновременно включены проблесковый маячок синего цвета и специальный звуковой сигнал. Именно при таком сочетании сигналов этот автомобиль имеет преимущество в движении (пп.3.3 и 1.2 термин «Главная дорога»).";
+        a_t[11] = "1";
+        a_length[11] = "3";
+        a_answers[11][0] = " Если на автомобиле милиции будут включены проблесковые маячки синего цвета.";
+        a_answers[11][1] = " Если на автомобиле милиции одновременно будут включены проблесковые маячки синего цвета и специальный звуковой сигнал.";
+        a_answers[11][2] = " В любом.";
+        q_id[12] = 13;
+        q_idb[12] = 26;
+        q_img[12] = 1;
+        q_img_name[12] = "20_19.png";
+        q_nq[12] = 13;
+        q_quest[12] = "Как Вам следует поступить при повороте налево?";
+        q_tips[12] = " Вы можете выехать за стоп-линию по разрешающему сигналу светофора. Однако при повороте налево Вы обязаны остановиться на перекрестке и уступить дорогу автомобилю, движущемуся со встречного направления прямо (п.13.4).";
+        a_t[12] = "1";
+        a_length[12] = "3";
+        a_answers[12][0] = " Проехать перекресток первым.";
+        a_answers[12][1] = " Выехать за стоп-линию и остановиться на перекрестке, чтобы уступить дорогу встречному автомобилю.";
+        a_answers[12][2] = " Остановиться перед стоп-линией и после проезда легкового автомобиля повернуть налево.";
+        q_id[13] = 14;
+        q_idb[13] = 26;
+        q_img[13] = 1;
+        q_img_name[13] = "20_20.png";
+        q_nq[13] = 14;
+        q_quest[13] = "Разрешено ли Вам выехать на перекресток, за которым образовался затор?";
+        q_tips[13] = " В данной ситуации Вы можете выехать на перекресток только для поворота или разворота, так как образовавшийся затор делает невозможным движение в прямом направлении без вынужденной остановки на перекрестке, а это создаст препятствие для движения в поперечном направлении (п.13.2).";
+        a_t[13] = "1";
+        a_length[13] = "3";
+        a_answers[13][0] = " Разрешено.";
+        a_answers[13][1] = " Разрешено, если Вы намерены выполнить поворот или разворот.";
+        a_answers[13][2] = " Запрещено.";
+        q_id[14] = 15;
+        q_idb[14] = 26;
+        q_img[14] = 1;
+        q_img_name[14] = "20_21.png";
+        q_nq[14] = 15;
+        q_quest[14] = "Вы намерены продолжить движение прямо. Кому Вы обязаны уступить дорогу?";
+        q_tips[14] = " При въезде на перекресток неравнозначных дорог по главной дороге (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги») Вы имеете преимущество перед грузовым и легковым автомобилями, находящимися на второстепенных дорогах (п.13.9). С мотоциклом, который также въезжает на перекресток по главной дороге, Вы разъезжаетесь по правилам проезда перекрестков равнозначных дорог, имея преимущество, так как находитесь справа от него (пп.13.10 и 13.11).";
+        a_t[14] = "2";
+        a_length[14] = "3";
+        a_answers[14][0] = " Только мотоциклу.";
+        a_answers[14][1] = " Мотоциклу и легковому автомобилю.";
+        a_answers[14][2] = " Никому.";
+        q_id[15] = 16;
+        q_idb[15] = 26;
+        q_img[15] = 1;
+        q_img_name[15] = "20_22.png";
+        q_nq[15] = 16;
+        q_quest[15] = "Кто из водителей, выполняющих поворот, нарушит Правила?";
+        q_tips[15] = " Водители обязаны выполнять требования сигналов светофора, дорожных знаков и разметки (п.1.3). В данной ситуации дорожный знак 4.1.1 «Движение прямо» предписывает двигаться только прямо (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[15] = "0";
+        a_length[15] = "4";
+        a_answers[15][0] = " Оба.";
+        a_answers[15][1] = " Только водитель легкового автомобиля.";
+        a_answers[15][2] = " Только водитель мотоцикла.";
+        a_answers[15][3] = " Никто не нарушит.";
+        q_id[16] = 17;
+        q_idb[16] = 26;
+        q_img[16] = 1;
+        q_img_name[16] = "20_23.png";
+        q_nq[16] = 17;
+        q_quest[16] = "Вы намерены продолжить движение в прямом направлении. Ваши действия?";
+        q_tips[16] = " На перекрестке равнозначных дорог Вы должны уступить дорогу легковому автомобилю, приближающемуся справа; перед мотоциклом Вы имеете преимущество, являясь для него «помехой справа» (п.13.10).";
+        a_t[16] = "1";
+        a_length[16] = "3";
+        a_answers[16][0] = " Проедете перекресток первым.";
+        a_answers[16][1] = " Уступите дорогу легковому автомобилю.";
+        a_answers[16][2] = " Уступите дорогу легковому автомобилю и мотоциклу.";
+        q_id[17] = 18;
+        q_idb[17] = 26;
+        q_img[17] = 1;
+        q_img_name[17] = "20_24.png";
+        q_nq[17] = 18;
+        q_quest[17] = "Кому Вы должны уступить дорогу при повороте налево?";
+        q_tips[17] = " На этом перекрестке неравнозначных дорог (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги») Вы должны уступить дорогу трамваю Б и легковому автомобилю, которые, также как и Вы, находятся на главной дороге. Поэтому Вы разъезжаетесь с ними по правилам проезда перекрестков равнозначных дорог: трамвай Б имеет преимущество перед безрельсовыми ТС, а легковой автомобиль является для Вас «помехой справа» (пп.13.10 и 13.11). Перед трамваем А Вы имеете преимущество, поскольку он движется по второстепенной дороге (п.13.9).";
+        a_t[17] = "1";
+        a_length[17] = "3";
+        a_answers[17][0] = " Только трамваям.";
+        a_answers[17][1] = " Трамваю Б и легковому автомобилю.";
+        a_answers[17][2] = " Всем транспортным средствам.";
+        q_id[18] = 19;
+        q_idb[18] = 26;
+        q_img[18] = 1;
+        q_img_name[18] = "20_25.png";
+        q_nq[18] = 19;
+        q_quest[18] = "Разрешено ли Вам выехать на перекресток, за которым образовался затор:";
+        q_tips[18] = " В данной ситуации при разрешающем сигнале светофора (п.6.2) Вы можете выполнить на перекрестке поворот или разворот. Продолжить движение в прямом направлении Вы не имеете права из-за затора, который заставит Вас остановиться на перекрестке, в результате чего после смены сигналов светофора будут созданы помехи движению других ТС (п.13.2).";
+        a_t[18] = "1";
+        a_length[18] = "3";
+        a_answers[18][0] = " Разрешено.";
+        a_answers[18][1] = " Разрешено, если Вы намерены выполнить поворот или разворот.";
+        a_answers[18][2] = " Запрещено.";
+        q_id[19] = 20;
+        q_idb[19] = 26;
+        q_img[19] = 1;
+        q_img_name[19] = "20_26.png";
+        q_nq[19] = 20;
+        q_quest[19] = "Вы намерены продолжить движение в прямом направлении. Ваши действия?";
+        q_tips[19] = " Наличие знака 6.8.2 «Тупик» (Приложение 1, ГОСТ Р 52289-2004) не меняет порядка проезда перекрестков равнозначных дорог, в соответствии с которым Вы должны уступить дорогу грузовому автомобилю, приближающемуся справа (п.13.10).";
+        a_t[19] = "1";
+        a_length[19] = "2";
+        a_answers[19][0] = " Проедете перекресток первым.";
+        a_answers[19][1] = " Уступите дорогу грузовому автомобилю.";
+        var q_img_l = 0;
+        var q_img_l_load = [];
+        var load_img_id;
+        Start();
+    </script>
+</body>
+</html>

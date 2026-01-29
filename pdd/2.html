@@ -1,0 +1,467 @@
+ <!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Новые билеты ПДД</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №2</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+        <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+
+       <div class="dropdown">
+      <button class="dropbtn">RU</button>
+      <div class="dropdown-content">
+      <a href="#">RU</a>
+      <a href="2kg.html">KG</a>
+
+      </div>
+    </div>
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+                <div class="menu-block-bilets">Выберите билет:</div>
+                <div class="menu-block-bilets-con">Категория ABM</div>
+                <button type="button" onclick="openStuff();" class="btn btn-outline-secondary">Выбрать рандомый билет</button>
+                             <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                               <span class="span-bilet" id="select-bilet30"><span> <a href="30.html"><big><strong>30</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+       <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+        <div></div>
+    </div>
+        <script src="script/site.min.js?ver=1.0"></script>
+        <script src="script/HintsRu.min.js?ver=1.0"></script>
+        <script>
+        var MyTime = 0;
+        var MyWrongs = 0;
+        var MySocialText = "";
+        var category_abmcd = 0;
+        var g_complitequests = 0;
+        var g_pause_active = false;
+        var res_win = 0;
+        var res_score_count_id;
+        var res_score = 0;
+        var res_score_final = 0;
+        var res_star = 0;
+        var g_registered = 0;
+        var g_global_rezim = 5;
+        var q_length = 20;
+        var q_id = [];
+        var q_idb = [];
+        var q_img = [];
+        var q_img_src = [];
+        var q_img_name = [];
+        var q_nq = [];
+        var q_quest = [];
+        var q_tips = [];
+        var q_qnum_id = -1;
+        var a_length = [];
+        var a_t = [];
+        var a_answers = [];
+        var q_nq_done = [];
+        var q_done = false;
+        var q_length_p5 = 0;
+        var q_id_p5 = [];
+        var q_idb_p5 = [];
+        var q_img_p5 = [];
+        var q_img_src_p5 = [];
+        var q_img_name_p5 = [];
+        var q_nq_p5 = [];
+        var q_quest_p5 = [];
+        var q_tips_p5 = [];
+        var q_qnum_id_p5 = -1;
+        var a_length_p5 = [];
+        var a_t_p5 = [];
+        var a_answers_p5 = [];
+        var q_nq_done_p5 = [];
+        var q_done_p5 = false;
+        var g_wrongs = [];
+        var g_wronrs_cur_counter = 0;
+        var g_wrongs_counter = 0;
+        var g_rights_counter = 0;
+        var g_global_update = 1;
+        var q_block_mistake = [];
+        var d_click_answer = 0;
+        var g_mistake = 0;
+        var g_block_p5 = 0;
+        var end_plus_exam = true;
+        var plus_end_mistake = false;
+        for (i = 0; i < q_length; i++) {
+            a_answers[i] = [];
+        }q_id[0] = 1;
+        q_idb[0] = 2;
+        q_img[0] = 1;
+        q_img_name[0] = "5_40.png";
+        q_nq[0] = 1;
+        q_quest[0] = "При движении по двухполосной дороге за грузовым автомобилем у Вас появилась возможность совершить обгон. Ваши действия?";
+        q_tips[0] = " Начиная обгон после длительного движения на безопасной дистанции за грузовым автомобилем, необходимо сразу перестроиться на полосу встречного движения, после чего провести сближение с обгоняемым ТС. Такие действия дадут возможность водителю грузового автомобиля заметить Вас и не мешать Вашему маневру, а у Вас появится хорошая обзорность, чтобы обеспечить контроль за изменением дорожной обстановки.";
+        a_t[0] = "1";
+        a_length[0] = "3";
+        a_answers[0][0] = " Максимально приблизитесь к обгоняемому автомобилю, затем перестроитесь на полосу встречного движения и завершите маневр.";
+        a_answers[0][1] = " Перестроитесь на полосу встречного движения, после чего произведете сближение с обгоняемым транспортным средством и завершите маневр.";
+        a_answers[0][2] = " Допустимы оба варианта действий.";
+        q_id[1] = 2;
+        q_idb[1] = 2   ;
+        q_img[1] = 0;
+        q_img_name[1] = "0";
+        q_nq[1] = 2;
+        q_quest[1] = "По какой траектории двигается прицеп легкового автомобиля при прохождении поворота?";
+        q_tips[1] = " При прохождении поворота прицеп легкового автомобиля движется по траектории, расположенной ближе к центру поворота, чем траектория движения автомобиля.";
+        a_t[1] = "2";
+        a_length[1] = "3";
+        a_answers[1][0] = " Дальше от центра поворота, чем траектория движения автомобиля.";
+        a_answers[1][1] = " По траектории движения автомобиля.";
+        a_answers[1][2] = " Ближе к центру поворота, чем траектория движения автомобиля.";
+        q_id[2] = 3;
+        q_idb[2] = 2   ;
+        q_img[2] = 0;
+        q_img_name[2] = "0";
+        q_nq[2] = 3;
+        q_quest[2] = "Принято считать, что среднее время реакции водителя составляет:";
+        q_tips[2] = " Время реакции водителя изменяется в пределах от 0,4 до 1,6 секунды и зависит от его психофизиологических особенностей, состояния, опыта, сложности дорожной обстановки и многих других факторов. Исходя из многочисленных исследований, принято считать, что среднее время реакции водителя составляет примерно 1 секунду.";
+        a_t[2] = "1";
+        a_length[2] = "3";
+        a_answers[2][0] = " Примерно 0,5 секунды.";
+        a_answers[2][1] = " Примерно 1 секунду.";
+        a_answers[2][2] = " Примерно 2 секунды.";
+        q_id[3] = 4;
+        q_idb[3] = 2   ;
+        q_img[3] = 0;
+        q_img_name[3] = "0";
+        q_nq[3] = 4;
+        q_quest[3] = "Как правильно произвести экстренное торможение на скользкой дороге, если автомобиль не оборудован антиблокировочной тормозной системой?";
+        q_tips[3] = " Если автомобиль не оборудован антиблокировочной тормозной системой, то на скользкой дороге следует тормозить прерывистым нажатием на педаль тормоза, не допуская блокировки колес (движения «юзом»).";
+        a_t[3] = "2";
+        a_length[3] = "3";
+        a_answers[3][0] = " Нажать на педаль тормоза до упора и удерживать ее до полной остановки.";
+        a_answers[3][1] = " Нажать на педаль тормоза с одновременным использованием стояночного тормоза.";
+        a_answers[3][2] = " Тормозить прерывистым нажатием на педаль тормоза, не допуская блокировки колес.";
+        q_id[4] = 5;
+        q_idb[4] = 2   ;
+        q_img[4] = 0;
+        q_img_name[4] = "0";
+        q_nq[4] = 5;
+        q_quest[4] = "С увеличением скорости движения на повороте величина центробежной силы:";
+        q_tips[4] = " При прохождении поворота водителю следует учитывать, что при увеличении скорости движения ТС центробежная сила увеличивается пропорционально квадрату скорости.";
+        a_t[4] = "2";
+        a_length[4] = "3";
+        a_answers[4][0] = " Не изменяется.";
+        a_answers[4][1] = " Увеличивается пропорционально скорости.";
+        a_answers[4][2] = " Увеличивается пропорционально квадрату скорости.";
+        q_id[5] = 6;
+        q_idb[5] = 2   ;
+        q_img[5] = 0;
+        q_img_name[5] = "0";
+        q_nq[5] = 6;
+        q_quest[5] = "При движении ночью во время сильной метели наилучшую видимость дороги обеспечивает включение:";
+        q_tips[5] = "] При движении ночью во время сильной метели дальний свет фар будет создавать слепящее действие и ухудшит видимость. В таких условиях целесообразно использовать включение противотуманных фар совместно с ближним светом фар.";
+        a_t[5] = "1";
+        a_length[5] = "3";
+        a_answers[5][0] = " Только противотуманных фар.";
+        a_answers[5][1] = " Противотуманных фар совместно с ближним светом фар.";
+        a_answers[5][2] = " Противотуманных фар совместно с дальним светом фар.";
+        q_id[6] = 7;
+        q_idb[6] = 2   ;
+        q_img[6] = 0;
+        q_img_name[6] = "0";
+        q_nq[6] = 7;
+        q_quest[6] = "При трогании на подъеме на автомобиле с механической коробкой передач следует начинать отключать (отпускать) стояночный тормоз:";
+        q_tips[6] = " При трогании на подъеме на автомобиле с механической коробкой передач стояночный тормоз следует начинать отключать (отпускать) одновременно с началом движения, чтобы избежать скатывания автомобиля (при отпускании до начала движения) и остановки двигателя (при отпускании после начала движения).";
+        a_t[6] = "1";
+        a_length[6] = "3";
+        a_answers[6][0] = " До начала движения.";
+        a_answers[6][1] = " Одновременно с началом движения.";
+        a_answers[6][2] = " После начала движения.";
+        q_id[7] = 8;
+        q_idb[7] = 2   ;
+        q_img[7] = 0;
+        q_img_name[7] = "0";
+        q_nq[7] = 8;
+        q_quest[7] = "Что понимается под остановочным путем?";
+        q_tips[7] = " Под остановочным путем понимается расстояние, пройденное ТС с момента обнаружения водителем опасности до полной остановки. Остановочный путь всегда больше тормозного, так как до начала торможения ТС успевает переместиться на расстояние, зависящее от времени реакции водителя и времени срабатывания тормозного привода.";
+        a_t[7] = "0";
+        a_length[7] = "3";
+        a_answers[7][0] = " Расстояние, пройденное транспортным средством с момента обнаружения водителем опасности до полной остановки.";
+        a_answers[7][1] = " Расстояние, пройденное транспортным средством с момента нажатия на педаль тормоза до полной остановки.";
+        a_answers[7][2] = " Расстояние, пройденное транспортным средством с момента начала срабатывания тормозного привода до полной остановки.";
+        q_id[8] = 9;
+        q_idb[8] = 2   ;
+        q_img[8] = 0;
+        q_img_name[8] = "0";
+        q_nq[8] = 9;
+        q_quest[8] = "Как следует поступить водителю при посадке со стороны проезжей части в автомобиль, стоящий у тротуара или на обочине?";
+        q_tips[8] = " Для обеспечения безопасности при посадке водителя со стороны проезжей части в автомобиль, стоящий у тротуара или на обочине, ему следует обойти автомобиль, идя по проезжей части навстречу движению ТС, чтобы иметь возможность видеть приближающиеся ТС.";
+        a_t[8] = "0";
+        a_length[8] = "3";
+        a_answers[8][0] = " Должен обойти автомобиль, идя по проезжей части навстречу движению транспортных средств.";
+        a_answers[8][1] = " Должен обойти автомобиль, идя по проезжей части по направлению движения транспортных средств.";
+        a_answers[8][2] = " Допустимы оба варианта действий.";
+        q_id[9] = 10;
+        q_idb[9] = 2;
+        q_img[9] = 1;
+        q_img_name[9] = "5_49.png";
+        q_nq[9] = 10;
+        q_quest[9] = "При движении в условиях тумана расстояние до предметов представляется:";
+        q_tips[9] = " При движении в условиях тумана водитель должен учитывать, что расстояние до предметов представляется большим, чем в действительности.";
+        a_t[9] = "0";
+        a_length[9] = "3";
+        a_answers[9][0] = " Большим, чем в действительности.";
+        a_answers[9][1] = " Соответствующим действительности.";
+        a_answers[9][2] = " Меньшим, чем в действительности.";
+        q_id[10] = 11;
+        q_idb[10] = 2   ;
+        q_img[10] = 0;
+        q_img_name[10] = "0";
+        q_nq[10] = 11;
+        q_quest[10] = "В темное время суток и в пасмурную погоду скорость встречного автомобиля воспринимается:";
+        q_tips[10] = " В темное время суток и в пасмурную погоду скорость встречного автомобиля воспринимается ниже, чем в действительности, что увеличивает опасность столкновения при встречном разъезде, обгоне и объезде.";
+        a_t[10] = "0";
+        a_length[10] = "3";
+        a_answers[10][0] = " Ниже, чем в действительности.";
+        a_answers[10][1] = " Восприятие скорости не меняется.";
+        a_answers[10][2] = " Выше, чем в действительности.";
+        q_id[11] = 12;
+        q_idb[11] = 2   ;
+        q_img[11] = 0;
+        q_img_name[11] = "0";
+        q_nq[11] = 12;
+        q_quest[11] = "При движении по какому участку дороги действие сильного бокового ветра наиболее опасно?";
+        q_tips[11] = " Действие сильного бокового ветра наиболее опасно при выезде с закрытого участка на открытый, так как возникающий в этом месте порыв ветра может повлиять на курсовую устойчивость автомобиля.";
+        a_t[11] = "1";
+        a_length[11] = "3";
+        a_answers[11][0] = " По закрытому деревьями.";
+        a_answers[11][1] = " При выезде с закрытого участка на открытый.";
+        a_answers[11][2] = " По открытому.";
+        q_id[12] = 13;
+        q_idb[12] = 2   ;
+        q_img[12] = 0;
+        q_img_name[12] = "0";
+        q_nq[12] = 13;
+        q_quest[12] = "Если во время движения по сухой дороге с асфальтобетонным покрытием начал моросить дождь, водителю следует:";
+        q_tips[12] = " При появлении первых капель дождя водителю следует уменьшить скорость и быть особенно осторожным, так как находящиеся на дороге пыль, масло, частицы резины и т.д. образуют скользкую пленку, которая впоследствии смывается дождем.";
+        a_t[12] = "0";
+        a_length[12] = "3";
+        a_answers[12][0] = " Уменьшить скорость и быть особенно осторожным.";
+        a_answers[12][1] = " Не изменяя скорости продолжить движение.";
+        a_answers[12][2] = " Увеличить скорость и попытаться проехать как можно большее расстояние, пока не начался сильный дождь.";
+        q_id[13] = 14;
+        q_idb[13] = 2   ;
+        q_img[13] = 0;
+        q_img_name[13] = "0";
+        q_nq[13] = 14;
+        q_quest[13] = "Как изменяется поле зрения водителя с увеличением скорости движения?";
+        q_tips[13] = " С увеличением скорости поле зрения водителя сужается, так как он вынужден смотреть намного дальше вперед, чтобы успеть оценить ситуацию в стремительно меняющейся дорожной обстановке.";
+        a_t[13] = "2";
+        a_length[13] = "3";
+        a_answers[13][0] = " Расширяется.";
+        a_answers[13][1] = " Не изменяется.";
+        a_answers[13][2] = " Сужается.";
+        q_id[14] = 15;
+        q_idb[14] = 2   ;
+        q_img[14] = 0;
+        q_img_name[14] = "0";
+        q_nq[14] = 15;
+        q_quest[14] = "В каком случае водителю необходимо оценивать обстановку сзади?";
+        q_tips[14] = " Начало движения ТС или его возобновление, торможение, осуществление какого-либо маневра (перестроения или изменения направления движения) приводят к изменениям окружающей дорожной обстановки. Это может вынудить других участников дорожного движения изменить направление своего движения или скорость. В целях минимизации возникающих рисков необходимо оценивать всю окружающую обстановку, в том числе сзади. Для этого используется зеркало заднего вида.";
+        a_t[14] = "3";
+        a_length[14] = "4";
+        a_answers[14][0] = " Перед началом или возобновлением движения.";
+        a_answers[14][1] = " Перед торможением.";
+        a_answers[14][2] = " Перед осуществлением маневра (перестроения или изменения направления движения).";
+        a_answers[14][3] = " Во всех перечисленных случаях.";
+        q_id[15] = 16;
+        q_idb[15] = 2   ;
+        q_img[15] = 0;
+        q_img_name[15] = "0";
+        q_nq[15] = 16;
+        q_quest[15] = "Зависит ли выбор бокового интервала от скорости движения?";
+        q_tips[15] = " С увеличением скорости увеличиваются и поперечные отклонения от задаваемой водителем траектории движения. Это происходит за счет боковой эластичности шин, люфтов в рулевом управлении, неровностей покрытия, воздействия ветра. Поэтому, увеличивая скорость, водители должны увеличивать боковой интервал.";
+        a_t[15] = "1";
+        a_length[15] = "2";
+        a_answers[15][0] = " Выбор бокового интервала от скорости движения не зависит.";
+        a_answers[15][1] = " При увеличении скорости движения боковой интервал необходимо увеличить.";
+        q_id[16] = 17;
+        q_idb[16] = 2   ;
+        q_img[16] = 0;
+        q_img_name[16] = "0";
+        q_nq[16] = 17;
+        q_quest[16] = "Как влияет утомленное состояние водителя на его внимание и реакцию?";
+        q_tips[16] = " В утомленном состоянии водителя время его реакции увеличивается, а внимание ослабляется.";
+        a_t[16] = "1";
+        a_length[16] = "3";
+        a_answers[16][0] = " Внимание ослабляется, время реакции уменьшается.";
+        a_answers[16][1] = " Внимание ослабляется, время реакции увеличивается.";
+        a_answers[16][2] = " Внимание и время реакции не изменяются.";
+        q_id[17] = 18;
+        q_idb[17] = 2   ;
+        q_img[17] = 0;
+        q_img_name[17] = "0";
+        q_nq[17] = 18;
+        q_quest[17] = "Как влияет алкоголь на время реакции водителя?";
+        q_tips[17] = " Опасность алкогольного опьянения при управлении ТС заключается в том, что реакция водителя замедляется, а значит, время реакции, необходимое для принятия решения, увеличивается.";
+        a_t[17] = "2";
+        a_length[17] = "3";
+        a_answers[17][0] = " Время реакции уменьшается.";
+        a_answers[17][1] = " Алкоголь на время реакции не влияет.";
+        a_answers[17][2] = " Время реакции увеличивается.";
+        q_id[18] = 19;
+        q_idb[18] = 2   ;
+        q_img[18] = 0;
+        q_img_name[18] = "0";
+        q_nq[18] = 19;
+        q_quest[18] = "Как воспринимается водителем скорость своего автомобиля при длительном движении по равнинной дороге на большой скорости?";
+        q_tips[18] = " Водитель определяет скорость своего автомобиля, главным образом, по скорости перемещения объектов, попадающих в поле его зрения. Если такие объекты, как деревья, дорожные знаки, другие ТС длительное время удалены от Вас, то угловая скорость их перемещения уменьшается. Этот эффект воспринимается водителем как уменьшение скорости движения самого автомобиля. Поэтому в подобных условиях движения водителю целесообразно чаще смотреть на приборную панель (щиток приборов), чтобы проверять правильность выбора скоростного режима движения.";
+        a_t[18] = "0";
+        a_length[18] = "3";
+        a_answers[18][0] = " Кажется меньше, чем в действительности.";
+        a_answers[18][1] = " Восприятие скорости не меняется.";
+        a_answers[18][2] = " Кажется больше, чем в действительности.";
+        q_id[19] = 20;
+        q_idb[19] = 2   ;
+        q_img[19] = 0;
+        q_img_name[19] = "0";
+        q_nq[19] = 20;
+        q_quest[19] = "При движении на легковом автомобиле, оборудованном ремнями безопасности, должны быть пристегнуты:";
+        q_tips[19] = " При движении на легковом автомобиле не только водитель, но и все пассажиры ТС, оборудованного ремнями безопасности, должны быть пристегнуты (пп.2.1.2 и 5.3).";
+        a_t[19] = "2";
+        a_length[19] = "3";
+        a_answers[19][0] = " Только водитель.";
+        a_answers[19][1] = " Водитель и пассажир на переднем сиденье.";
+        a_answers[19][2] = " Все лица, находящиеся в автомобиле.";
+        var q_img_l = 0;
+        var q_img_l_load = [];
+        var load_img_id;
+        Start();
+        </script>
+    </body>
+</html>

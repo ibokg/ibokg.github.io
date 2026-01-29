@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Новые билеты ПДД</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №27</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+                 <div class="dropdown" >
+      <button class="dropbtn">KG</button>
+      <div class="dropdown-content">
+      <a href="27.html">RU</a>
+      <a href="#">KG</a>
+
+      </div>
+    </div>
+
+
+
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+     <div class="menu-block-bilets">Билет тандоо:</div>
+            <button type="button" onclick="openkgStuff();" class="btn btn-outline-secondary">Кокус билет тандаңыз</button>
+                <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1kg.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2kg.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3kg.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4kg.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5kg.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6kg.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7kg.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8kg.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9kg.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10kg.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11kg.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12kg.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13kg.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14kg.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15kg.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16kg.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17kg.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18kg.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19kg.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20kg.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21kg.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22kg.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23kg.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24kg.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25kg.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26kg.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27kg.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28kg.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29kg.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+    </div>
+    <script src="script/site.min.js?ver=1.0"></script>
+    <script src="script/HintsKG.min.js?ver=1.0"></script>
+    <script>
+        var MyTime = 0;
+        var MyWrongs = 0;
+        var MySocialText = "";
+        var category_abmcd = 0;
+        var g_complitequests = 0;
+        var g_pause_active = false;
+        var res_win = 0;
+        var res_score_count_id;
+        var res_score = 0;
+        var res_score_final = 0;
+        var res_star = 0;
+        var g_registered = 0;
+        var g_global_rezim = 5;
+        var q_length = 20;
+        var q_id = [];
+        var q_idb = [];
+        var q_img = [];
+        var q_img_src = [];
+        var q_img_name = [];
+        var q_nq = [];
+        var q_quest = [];
+        var q_tips = [];
+        var q_qnum_id = -1;
+        var a_length = [];
+        var a_t = [];
+        var a_answers = [];
+        var q_nq_done = [];
+        var q_done = false;
+        var q_length_p5 = 0;
+        var q_id_p5 = [];
+        var q_idb_p5 = [];
+        var q_img_p5 = [];
+        var q_img_src_p5 = [];
+        var q_img_name_p5 = [];
+        var q_nq_p5 = [];
+        var q_quest_p5 = [];
+        var q_tips_p5 = [];
+        var q_qnum_id_p5 = -1;
+        var a_length_p5 = [];
+        var a_t_p5 = [];
+        var a_answers_p5 = [];
+        var q_nq_done_p5 = [];
+        var q_done_p5 = false;
+        var g_wrongs = [];
+        var g_wronrs_cur_counter = 0;
+        var g_wrongs_counter = 0;
+        var g_rights_counter = 0;
+        var g_global_update = 1;
+        var q_block_mistake = [];
+        var d_click_answer = 0;
+        var g_mistake = 0;
+        var g_block_p5 = 0;
+        var end_plus_exam = true;
+        var plus_end_mistake = false;
+        for (i = 0; i < q_length; i++) {
+            a_answers[i] = [];
+        }q_id[0] = 1;
+        q_idb[0] = 27;
+        q_img[0] = 1;
+        q_img_name[0] = "20_27.png";
+        q_nq[0] = 1;
+        q_quest[0] = "Солго бурулайын деп жатасыз. Сиз кимди биринчи өткөрүшүңүз керек?";
+        q_tips[0] = " При проезде данного перекрестка неравнозначных дорог по направлению главной дороги (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги») Вам нет необходимости уступать дорогу ни автобусу, который движется по второстепенной дороге (п.13.9), ни легковому автомобилю, с которым Вы разъезжаетесь по правилам проезда перекрестков равнозначных дорог (пп.13.10 и 13.11), поскольку Вы являетесь для него «помехой справа».";
+        a_t[0] = "2";
+        a_length[0] = "3";
+        a_answers[0][0] = "Автобусту гана.";
+        a_answers[0][1] = "Жеңил унааны гана.";
+        a_answers[0][2] = "Эч кимди.";
+        q_id[1] = 2;
+        q_idb[1] = 27;
+        q_img[1] = 1;
+        q_img_name[1] = "20_28.png";
+        q_nq[1] = 2;
+        q_quest[1] = "Светофордун жашыл сигналы күйгөндө, эмне кылышыңыз керек?";
+        q_tips[1] = " Прежде чем начать или продолжить движение при включении зеленого сигнала светофора, Вы должны убедиться в отсутствии завершающих переход проезжей части пешеходов, а также ТС, завершающих движение через перекресток, которые могут появиться из-за стоящего справа грузового автомобиля (п.13.8).";
+        a_t[1] = "2";
+        a_length[1] = "3";
+        a_answers[1][0] = "Дароо эле айдап киришиңиз керек.";
+        a_answers[1][1] = "Жөө жүргөн кишилер жолдон өтүп кеткенине көзүңүз жеткенде гана айдап башташыңыз керек.";
+        a_answers[1][2] = "Жөө жүргөн кишилер жолдон өтүп кеткенине жана башка унаалардын светофордун сигналы башкага күйгөндөн кийин кесилиштен өтүп кеткенине көзүңүз жеткенде гана айдап башташыңыз керек.";
+        q_id[2] = 3;
+        q_idb[2] = 27;
+        q_img[2] = 1;
+        q_img_name[2] = "20_29.png";
+        q_nq[2] = 3;
+        q_quest[2] = "Сиз кесилиштен түз эле өтөйүн деп жатасыз. Кимге жол беришиңиз керек?";
+        q_tips[2] = " На перекрестке равнозначных дорог Вы обязаны уступить дорогу находящемуся справа грузовому автомобилю, а также трамваю, который имеет преимущество независимо от направления его движения (п.13.10).";
+        a_t[2] = "2";
+        a_length[2] = "3";
+        a_answers[2][0] = "Трамвайга гана.";
+        a_answers[2][1] = "Жүк ташуучу унаага гана.";
+        a_answers[2][2] = "Эки унаага гана тең.";
+        q_id[3] = 4;
+        q_idb[3] = 27;
+        q_img[3] = 1;
+        q_img_name[3] = "20_30.png";
+        q_nq[3] = 4;
+        q_quest[3] = "Сиз солго бурулайын деп жатасыз. Кимге жол бергенге милдеттүүсүз?";
+        q_tips[3] = " Поворачивая налево по направлению главной дороги (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги») на перекрестке неравнозначных дорог, Вы пользуетесь преимуществом перед автобусом, который находится на второстепенной дороге (п.13.9). Легковой автомобиль также находится на главной дороге, но он движется слева от Вас, поэтому по правилам проезда перекрестков равнозначных дорог (пп.13.10 и 13.11) Вы имеете перед ним преимущество.";
+        a_t[3] = "2";
+        a_length[3] = "3";
+        a_answers[3][0] = "Автобуска гана.";
+        a_answers[3][1] = "Жеңил унаага гана.";
+        a_answers[3][2] = "Эч кимге.";
+        q_id[4] = 5;
+        q_idb[4] = 27;
+        q_img[4] = 1;
+        q_img_name[4] = "20_31.png";
+        q_nq[4] = 5;
+        q_quest[4] = "Сиз оңго бурулайын деп жатасыз. Андайда кайрылып жаткан унаага жол бергенге милдеттүүсүзбү?";
+        q_tips[4] = " При движении в направлении стрелки, включенной в дополнительной секции одновременно с красным сигналом светофора, Вы обязаны уступить дорогу ТС, движущимся с любых других направлений, в том числе выполняющим разворот на перекрестке (п.13.5).";
+        a_t[4] = "0";
+        a_length[4] = "2";
+        a_answers[4][0] = "Милдеттүүсүз.";
+        a_answers[4][1] = "Милдеттүү эмессиз.";
+        q_id[5] = 6;
+        q_idb[5] = 27;
+        q_img[5] = 1;
+        q_img_name[5] = "20_32.png";
+        q_nq[5] = 6;
+        q_quest[5] = "Сиз кайсы учурда кесилиштен биринчи өткөнгө укуктуусуз?";
+        q_tips[5] = " При движении прямо или налево данный перекресток равнозначных дорог Вы имеете право проехать первым, поскольку водитель легкового автомобиля, находящегося слева, должен уступить Вам дорогу (п.13.10). При развороте это ТС становится для Вас «помехой справа». Поэтому преимущество в движении переходит к нему.";
+        a_t[5] = "1";
+        a_length[5] = "3";
+        a_answers[5][0] = "Түз эле айдаганда гана.";
+        a_answers[5][1] = "Түз жана солго айдаганда гана.";
+        a_answers[5][2] = "Түз, солго жана кайра артка айдаганда гана.";
+        q_id[6] = 7;
+        q_idb[6] = 27;
+        q_img[6] = 1;
+        q_img_name[6] = "20_33.png";
+        q_nq[6] = 7;
+        q_quest[6] = "Кесилиштен өтүп түз айдайын деп жатасыз. Сфетофордун сары сигналы күйсө, эмне кылышыңыз керек?";
+        q_tips[6] = " При желтом мигающем сигнале светофора перекресток считается нерегулируемым (п.13.3). Руководствуясь знаком приоритета 2.1 «Главная дорога», Вы можете проехать этот перекресток первым, пользуясь преимуществом как перед грузовым автомобилем, так и перед трамваем, находящимися на второстепенной дороге (п.13.9).";
+        a_t[6] = "0";
+        a_length[6] = "4";
+        a_answers[6][0] = "Кесилиштен биринчи өтүшүңүз керек.";
+        a_answers[6][1] = "Жүк ташуучу унааны гана биринчи өткөрүшүңүз керек.";
+        a_answers[6][2] = "Трамвайды гана биринчи өткөрүшүңүз керек.";
+        a_answers[6][3] = " Эки унааны тең биринчи өткөрүшүңүз керек.";
+        q_id[7] = 8;
+        q_idb[7] = 27;
+        q_img[7] = 1;
+        q_img_name[7] = "20_34.png";
+        q_nq[7] = 8;
+        q_quest[7] = "Оңго бурулайын деп жатасыз. Сиз эмне кыласыз?";
+        q_tips[7] = " В случае, когда регулировщик расположен к Вам левым или правым боком, а его руки опущены либо вытянуты в стороны, движение разрешено прямо и направо (п.6.10). Однако, поворачивая направо, следует уступить дорогу пешеходам, переходящим проезжую часть, на которую Вы поворачиваете (п.13.1).";
+        a_t[7] = "1";
+        a_length[7] = "3";
+        a_answers[7][0] = "Жөө жүргөн кишилерге жол бербей эле оңго буруласыз";
+        a_answers[7][1] = "Жөө жүргөн кишилерге жол берип, анан оңго буруласыз.";
+        a_answers[7][2] = "Кесилиштин алдында токтоп, жолдогу кыймылды жөнгө салган кызматкердин башка белги берерин күтүп турасыз";
+        q_id[8] = 9;
+        q_idb[8] = 27;
+        q_img[8] = 1;
+        q_img_name[8] = "20_35.png";
+        q_nq[8] = 9;
+        q_quest[8] = "Кайсы багытка айдаганда сиз күйүп-жанып турган маягы жана үн-дабыш сигналы күйгүзүлгөн унааны биринчи өткөрүшүңүз керек?";
+        q_tips[8] = " При движении в любом направлении Вы должны уступить дорогу легковому автомобилю с включенными проблесковым маячком синего цвета и (или) красного цвета и специальным звуковым сигналом (п.3.3).";
+        a_t[8] = "2";
+        a_length[8] = "3";
+        a_answers[8][0] = "Солго гана.";
+        a_answers[8][1] = "Солго жана артка кайрылганда.";
+        a_answers[8][2] = "Каалаган багытка.";
+        q_id[9] = 10;
+        q_idb[9] = 27;
+        q_img[9] = 1;
+        q_img_name[9] = "20_36.png";
+        q_nq[9] = 10;
+        q_quest[9] = "Сиз түз эле айдайын деп жатасыз. Эгер светофордун сары сигналы күйүп-өчө баштаса, эмне кылышыңыз керек?";
+        q_tips[9] = " При желтом мигающем сигнале светофора перекресток считается нерегулируемым (п.13.3), поэтому Вам следует руководствоваться знаком приоритета 2.1 «Главная дорога» и табличкой 8.13 «Направление главной дороги». В данном случае следует уступить дорогу только легковому автомобилю, который, также как и Вы, находится на главной дороге и является для Вас «помехой справа» (пп.13.10 и 13.11). По отношению к трамваю Вы пользуетесь преимуществом, поскольку он двигается по второстепенной дороге (п.13.9).";
+        a_t[9] = "2";
+        a_length[9] = "4";
+        a_answers[9][0] = "Эки унааны тең биринчи өткөрүшүңүз керек.";
+        a_answers[9][1] = "Трамвайды гана биринчи өткөрүшүңүз керек";
+        a_answers[9][2] = "Жеңил унааны гана биринчи өткөрүшүңүз керек";
+        a_answers[9][3] = "Биринчи болуп өтүп кетишиңиз керек.";
+        q_id[10] = 11;
+        q_idb[10] = 27;
+        q_img[10] = 1;
+        q_img_name[10] = "20_37.png";
+        q_nq[10] = 11;
+        q_quest[10] = "Кесилиштен өтүп, түз эле айдайын деп жатасыз. Сиз эмне кыласыз?";
+        q_tips[10] = " Включенный указатель поворота трамвая информирует о том, что пути движения Вашего автомобиля и трамвая пересекаются на перекрестке. Учитывая, что зеленый сигнал светофора разрешает движение прямо, а специальный светофор в виде буквы «Т» запрещает трамваю поворот направо, Вы можете проехать перекресток первым (пп.6.2 и 6.8).";
+        a_t[10] = "0";
+        a_length[10] = "2";
+        a_answers[10][0] = "Кесилиштен сиз биринчи өтөсүз.";
+        a_answers[10][1] = "Биринчи трамвайды өткөрөсүз.";
+        q_id[11] = 12;
+        q_idb[11] = 27;
+        q_img[11] = 1;
+        q_img_name[11] = "20_38.png";
+        q_nq[11] = 12;
+        q_quest[11] = "Бурулайын деп жаткан айдоочулардын кимиси жөө жүргөн кишилерди биринчи өткөрүшү керек?";
+        q_tips[11] = " Оба водителя при повороте на перекрестке должны уступить дорогу пешеходам (п.13.1). При отсутствии пешеходного перехода Правила предписывают пешеходам переходить проезжую часть по линии тротуаров или обочин (п.4.3).";
+        a_t[11] = "2";
+        a_length[11] = "3";
+        a_answers[11][0] = "Жеңил унаанын айдоочусу гана.";
+        a_answers[11][1] = " Жүк ташуучу унаанын айдоочусу гана.";
+        a_answers[11][2] = "Экөө тең.";
+        q_id[12] = 13;
+        q_idb[12] = 27;
+        q_img[12] = 1;
+        q_img_name[12] = "20_39.png";
+        q_nq[12] = 13;
+        q_quest[12] = "Бул жагдайда солго бурулсаңыз болобу?";
+        q_tips[12] = " Находясь на второстепенной дороге, Вы должны уступить дорогу грузовому автомобилю. Однако, Вы можете приступить к повороту налево вместе с ним, если убедитесь в том, что траектории движения автомобилей не пересекаются, а в процессе поворота Вы не создадите ему помехи в движении (пп.13.3, 13.9 и 1.2 термин «Уступить дорогу (не создавать помех)»).";
+        a_t[12] = "1";
+        a_length[12] = "3";
+        a_answers[12][0] = "Болот.";
+        a_answers[12][1] = "Солго буруйын деп жаткан бет маңдайдан келаткан унаага тоскоолдук жаратпай турганыңызга көзүңүз жетсе, болот.";
+        a_answers[12][2] = "Болбойт.";
+        q_id[13] = 14;
+        q_idb[13] = 27;
+        q_img[13] = 1;
+        q_img_name[13] = "20_40.png";
+        q_nq[13] = 14;
+        q_quest[13] = "Светофордун жашыл сигналы күйгөндө, сиз кимди биринчи өткөрүшүңүз керек?";
+        q_tips[13] = " Вы должны уступить дорогу всем ТС, не успевшим завершить движение через перекресток (п.13.8).";
+        a_t[13] = "2";
+        a_length[13] = "3";
+        a_answers[13][0] = "Кесилиштен бурулуп жаткан жүк ташуучу унааны гана.";
+        a_answers[13][1] = "Жеңил унааны гана.";
+        a_answers[13][2] = "Эки унааны тең.";
+        q_id[14] = 15;
+        q_idb[14] = 27;
+        q_img[14] = 1;
+        q_img_name[14] = "21_1.png";
+        q_nq[14] = 15;
+        q_quest[14] = "Кесилиштен өтүп, түз эле айдайын деп жатасыз. Сиз кимди биринчи өткөрүшүңүз керек?";
+        q_tips[14] = " Вы должны уступить дорогу обоим трамваям, поскольку на перекрестках равнозначных дорог трамвай имеет преимущество перед безрельсовыми ТС (п.13.10) независимо от направления его движения.";
+        a_t[14] = "2";
+        a_length[14] = "3";
+        a_answers[14][0] = "А трамвайды гана.";
+        a_answers[14][1] = "Б трамвайды гана.";
+        a_answers[14][2] = "Эки трамвайды тең.";
+        q_id[15] = 16;
+        q_idb[15] = 27;
+        q_img[15] = 1;
+        q_img_name[15] = "21_2.png";
+        q_nq[15] = 16;
+        q_quest[15] = "Солго бурулайын деп жатасыз. Сиз эмне кылышыңыз керек?:";
+        q_tips[15] = " Вы и водитель автобуса находитесь на главной дороге (знак 2.1 «Главная дорога»), поэтому при повороте налево Вы должны уступить дорогу автобусу (п.13.12). Перед легковым автомобилем Вы имеете преимущество, так как он находится на второстепенной дороге (п.13.9).";
+        a_t[15] = "1";
+        a_length[15] = "3";
+        a_answers[15][0] = "Биринчи өткөнгө укуктуусуз.";
+        a_answers[15][1] = "Автобусту гана биринчи өткөрүшүңүз керек.";
+        a_answers[15][2] = "Жеңил унааны жана автобусту биринчи өткөрүшүңүз керек.";
+        q_id[16] = 17;
+        q_idb[16] = 27;
+        q_img[16] = 1;
+        q_img_name[16] = "21_3.png";
+        q_nq[16] = 17;
+        q_quest[16] = "Кайсы учурда сиз трамвайды биринчи өткөрүшүңүз керек?";
+        q_tips[16] = " Включенный указатель поворота трамвая информирует о том, что пути движения Вашего автомобиля и трамвая пересекаются на перекрестке. Учитывая, что данный сигнал светофора одновременно разрешает движение обоим ТС, Вы обязаны уступить дорогу трамваю, который имеет преимущество перед безрельсовыми ТС (пп.6.2 и 13.6).";
+        a_t[16] = "2";
+        a_length[16] = "3";
+        a_answers[16][0] = "Солго бурула турган болсоңуз.";
+        a_answers[16][1] = "Түз эле айдай турган болсоңуз.";
+        a_answers[16][2] = "Эки учурда тең.";
+        q_id[17] = 18;
+        q_idb[17] = 27;
+        q_img[17] = 1;
+        q_img_name[17] = "21_4.png";
+        q_nq[17] = 18;
+        q_quest[17] = "Түз эле айдайын деп жатасыз. Сиз эмне кылышыңыз керек?";
+        q_tips[17] = " В данной ситуации Вы должны уступить дорогу только трамваю, который на перекрестке равнозначных дорог имеет преимущество перед безрельсовыми ТС (п.13.10). Встречный легковой автомобиль, поворачивающий налево, обязан уступить дорогу Вам (п.13.12).";
+        a_t[17] = "1";
+        a_length[17] = "3";
+        a_answers[17][0] = "Кесилиштен биринчи болуп өтөсүз.";
+        a_answers[17][1] = "Трамвайды гана биринчи өткөрүшүңүз керек.";
+        a_answers[17][2] = "Трамвайды жана жеңил унааны биринчи өткөрүшүңүз керек.";
+        q_id[18] = 19;
+        q_idb[18] = 27;
+        q_img[18] = 1;
+        q_img_name[18] = "21_5.png";
+        q_nq[18] = 19;
+        q_quest[18] = "Кому Вы должны уступить дорогу при повороте налево?";
+        q_tips[18] = " При повороте налево на данном перекрестке неравнозначных дорог (знаки 2.1 «Главная дорога» и 8.13 «Направление главной дороги») Вы должны уступить дорогу только автобусу, который, так же как и Вы, движется по главной дороге и при Вашем повороте налево будет для Вас «помехой справа» (пп.13.10 и 13.11). Перед легковым автомобилем, находящимся на второстепенной дороге, Вы имеете преимущество (п.13.9).";
+        a_t[18] = "0";
+        a_length[18] = "3";
+        a_answers[18][0] = " Только автобусу.";
+        a_answers[18][1] = " Только легковому автомобилю.";
+        a_answers[18][2] = " Никому.";
+        q_id[19] = 20;
+        q_idb[19] = 27;
+        q_img[19] = 1;
+        q_img_name[19] = "21_6.png";
+        q_nq[19] = 20;
+        q_quest[19] = "Кесилиштен өтүп, түз эле айдайын деп жатасыз. Сиз кимди биринчи өткөрүшүңүз керек?";
+        q_tips[19] = " Зеленый сигнал светофора дает право на движение Вам и встречным ТС (п.6.2). При этом Вы должны уступить дорогу только трамваю, так как он имеет преимущество по отношению к безрельсовым ТС (п.13.6). Встречный легковой автомобиль должен уступить Вам дорогу, так как он поворачивает налево (п.13.4).";
+        a_t[19] = "1";
+        a_length[19] = "3";
+        a_answers[19][0] = "Трамвайды жана жеңил унааны.";
+        a_answers[19][1] = "Трамвайды гана.";
+        a_answers[19][2] = "Эч кимди.";
+        var q_img_l = 0;
+        var q_img_l_load = [];
+        var load_img_id;
+        Start();
+    </script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Новые билеты ПДД</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №13</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+        <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+               <div class="dropdown" >
+      <button class="dropbtn">RU</button>
+      <div class="dropdown-content">
+      <a href="#">RU</a>
+      <a href="13kg.html">KG</a>
+
+      </div>
+    </div>
+
+
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+                <div class="menu-block-bilets">Выберите билет:</div>
+                <div class="menu-block-bilets-con">Категория ABM</div>
+                <button type="button" onclick="openStuff();" class="btn btn-outline-secondary">Выбрать рандомый билет</button>
+                         <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                               <span class="span-bilet" id="select-bilet30"><span> <a href="30.html"><big><strong>30</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+        <div></div>
+    </div>
+        <script src="script/site.min.js?ver=1.0"></script>
+        <script src="script/HintsRu.min.js?ver=1.0"></script>
+        <script>
+            var MyTime = 0;
+            var MyWrongs = 0;
+            var MySocialText = "";
+            var category_abmcd = 0;
+            var g_complitequests = 0;
+            var g_pause_active = false;
+            var res_win = 0;
+            var res_score_count_id;
+            var res_score = 0;
+            var res_score_final = 0;
+            var res_star = 0;
+            var g_registered = 0;
+            var g_global_rezim = 5;
+            var q_length = 20;
+            var q_id = [];
+            var q_idb = [];
+            var q_img = [];
+            var q_img_src = [];
+            var q_img_name = [];
+            var q_nq = [];
+            var q_quest = [];
+            var q_tips = [];
+            var q_qnum_id = -1;
+            var a_length = [];
+            var a_t = [];
+            var a_answers = [];
+            var q_nq_done = [];
+            var q_done = false;
+            var q_length_p5 = 0;
+            var q_id_p5 = [];
+            var q_idb_p5 = [];
+            var q_img_p5 = [];
+            var q_img_src_p5 = [];
+            var q_img_name_p5 = [];
+            var q_nq_p5 = [];
+            var q_quest_p5 = [];
+            var q_tips_p5 = [];
+            var q_qnum_id_p5 = -1;
+            var a_length_p5 = [];
+            var a_t_p5 = [];
+            var a_answers_p5 = [];
+            var q_nq_done_p5 = [];
+            var q_done_p5 = false;
+            var g_wrongs = [];
+            var g_wronrs_cur_counter = 0;
+            var g_wrongs_counter = 0;
+            var g_rights_counter = 0;
+            var g_global_update = 1;
+            var q_block_mistake = [];
+            var d_click_answer = 0;
+            var g_mistake = 0;
+            var g_block_p5 = 0;
+            var end_plus_exam = true;
+            var plus_end_mistake = false;
+            for (i = 0; i < q_length; i++) {
+                a_answers[i] = [];
+            }q_id[0] = 1;
+            q_idb[0] = 13;
+            q_img[0] = 1;
+            q_img_name[0] = "11_22.png";
+            q_nq[0] = 1;
+            q_quest[0] = "В чем особенность скоростного режима на этом участке дороги?";
+            q_tips[0] = " Табличка 8.14 «Полоса движения» указывает, что действие знака 4.6 «Ограничение минимальной скорости» распространяется только на левую полосу, минимальная допустимая скорость движения по которой – 40 км/ч (Приложение 1).";
+            a_t[0] = "2";
+            a_length[0] = "3";
+            a_answers[0][0] = " Рекомендуемая скорость движения – 40 км/ч.";
+            a_answers[0][1] = " Минимальная допустимая скорость движения – 40 км/ч.";
+            a_answers[0][2] = " Минимальная допустимая скорость движения по левой полосе – 40 км/ч.";
+            q_id[1] = 2;
+            q_idb[1] = 13;
+            q_img[1] = 1;
+            q_img_name[1] = "11_23.png";
+            q_nq[1] = 2;
+            q_quest[1] = "Какие из указанных знаков запрещают поворот налево водителям транспортных средств не являющихся маршрутными?";
+            q_tips[1] = " Знак 5.13.1 «Выезд на дорогу с полосой для маршрутных транспортных средств» (знак А) устанавливают перед выездом на дорогу, на которой общий поток ТС движется слева на право, а маршрутные ТС по своей полосе – справа налево. По полосе для маршрутных ТС движение других ТС запрещено (п.18.2). Таким образом, повернуть налево на перекрестке, перед которым установлен знак 5.13.1, нельзя. Знак 3.19 «Разворот запрещен» (знак Б) запрещает только разворот, поворот налево при этом возможен. Знак 6.3.1 «Место для разворота» (знак В) указывает место для разворота на участке многополосной дороги между перекрестками. При этом поворот налево в этом месте запрещен (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[1] = "2";
+            a_length[1] = "4";
+            a_answers[1][0] = " Только А.";
+            a_answers[1][1] = " А и Б.";
+            a_answers[1][2] = " А и В.";
+            a_answers[1][3] = " Все.";
+            q_id[2] = 3;
+            q_idb[2] = 13;
+            q_img[2] = 1;
+            q_img_name[2] = "11_24.png";
+            q_nq[2] = 3;
+            q_quest[2] = "Можно ли Вам повернуть направо на этом перекрестке?";
+            q_tips[2] = " Знак 6.8.2 «Тупик» лишь информирует о том, что направо ведет дорога, не имеющая сквозного проезда. Знак не вводит никаких запретов на маневры (Приложение 1).";
+            a_t[2] = "0";
+            a_length[2] = "3";
+            a_answers[2][0] = " Можно.";
+            a_answers[2][1] = " Можно, если Вы проживаете или работаете на территории, расположенной справа от перекрестка.";
+            a_answers[2][2] = " Нельзя.";
+            q_id[3] = 4;
+            q_idb[3] = 13;
+            q_img[3] = 1;
+            q_img_name[3] = "11_25.png";
+            q_nq[3] = 4;
+            q_quest[3] = "Знаки предупреждают Вас о том, что:";
+            q_tips[3] = " Знак 1.22 «Пешеходный переход» предупреждает Вас о приближении к переходу, обозначенному знаками 5.19.1 и 5.19.2 «Пешеходный переход» и соответствующей разметкой. В населенных пунктах предупреждающие знаки устанавливают на расстоянии от 50 до 100 м до опасного участка. Однако в данном случае переход скрыт за поворотом улицы, поэтому знак установлен на большем, чем обычно, расстоянии, которое и указано на табличке 8.1.1 «Расстояние до объекта» (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[3] = "1";
+            a_length[3] = "3";
+            a_answers[3][0] = " На протяжении 150 м возможно появление пешеходов на проезжей части.";
+            a_answers[3][1] = " Через 150 м находится пешеходный переход.";
+            a_answers[3][2] = " Через 150 м находится пешеходная дорожка.";
+            q_id[4] = 5;
+            q_idb[4] = 13;
+            q_img[4] = 1;
+            q_img_name[4] = "11_26.png";
+            q_nq[4] = 5;
+            q_quest[4] = "Вам разрешено продолжить движение:";
+            q_tips[4] = " Знак 4.3 «Круговое движение» обязывает до выезда в нужный проезд двигаться вокруг центрального островка против часовой стрелки. Таким образом, движение в направлении В запрещено. Кроме того, в данном случае знак 3.18.1 «Поворот направо запрещен» запрещает Вам и поворот в первый по ходу движения проезд (направление А) (Приложение 1).";
+            a_t[4] = "0";
+            a_length[4] = "3";
+            a_answers[4][0] = " Только в направлении Б.";
+            a_answers[4][1] = " В направлениях А или Б.";
+            a_answers[4][2] = " В направлениях Б или В.";
+            q_id[5] = 6;
+            q_idb[5] = 13;
+            q_img[5] = 1;
+            q_img_name[5] = "11_27.png";
+            q_nq[5] = 6;
+            q_quest[5] = "Какие из указанных знаков запрещают движение транспортных средств, скорость которых по технической характеристике или их состоянию менее 40 км/ч?";
+            q_tips[5] = " На автомагистралях, обозначаемых знаком 5.1 «Автомагистраль» (знак А), запрещено движение ТС, скорость которых по технической характеристике или их состоянию менее 40 км/ч (п.16.1). Точно такие же требования распространяются и на дороги, обозначенные знаком 5.3 «Дорога для автомобилей» (знак Б) (п.16.3). Знак 6.2 «Рекомендуемая скорость» (знак В) указывает скорость, с которой рекомендуется движение на данном участке дороги, при этом не исключается возможность двигаться с меньшей или большей скоростью (Приложение 1).";
+            a_t[5] = "2";
+            a_length[5] = "3";
+            a_answers[5][0] = " Только А.";
+            a_answers[5][1] = " Только В.";
+            a_answers[5][2] = " А и Б.";
+            q_id[6] = 7;
+            q_idb[6] = 13;
+            q_img[6] = 1;
+            q_img_name[6] = "11_28.png";
+            q_nq[6] = 7;
+            q_quest[6] = "Какие из указанных знаков распространяют свое действие только на период времени, когда покрытие проезжей части влажное?";
+            q_tips[6] = " Только установленные вместе знаки А (3.24 «Ограничение максимальной скорости» и 8.16 «Влажное покрытие») распространяют свое действие на период времени, когда покрытие влажное (дождь, мокрый снег). Другие знаки предупреждают о возможной опасности: Б (1.18 «Выброс гравия») – о приближении к участку дороги, где возможен выброс гравия или щебня из-под колес автомобиля; В (1.15 «Скользкая дорога») – о приближении к участку дороги с повышенной скользкостью, которая может быть вызвана различными причинами (гололедица, снежный накат и т.д.) (Приложение 1).";
+            a_t[6] = "0";
+            a_length[6] = "3";
+            a_answers[6][0] = " Только А.";
+            a_answers[6][1] = " А и Б.";
+            a_answers[6][2] = " Все.";
+            q_id[7] = 8;
+            q_idb[7] = 13;
+            q_img[7] = 1;
+            q_img_name[7] = "11_29.png";
+            q_nq[7] = 8;
+            q_quest[7] = "Разрешается ли Вам поставить автомобиль на стоянку в указанном месте?";
+            q_tips[7] = " Знак 3.28 «Стоянка запрещена» с табличкой 8.2.2 «Зона действия» запрещает стоянку на протяжении 50 м за знаком. Поставив автомобиль на стоянку в указанном месте, Вы нарушите требования запрещающего знака, даже если проживаете рядом с этим местом (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[7] = "2";
+            a_length[7] = "3";
+            a_answers[7][0] = " Разрешается.";
+            a_answers[7][1] = " Разрешается, если Вы проживаете рядом с этим местом.";
+            a_answers[7][2] = " Запрещается.";
+            q_id[8] = 9;
+            q_idb[8] = 13;
+            q_img[8] = 1;
+            q_img_name[8] = "11_30.png";
+            q_nq[8] = 9;
+            q_quest[8] = "Вы управляете грузовым автомобилем с разрешенной максимальной массой не более 3,5 т. В каком направлении Вам разрешено дальнейшее движение?";
+            q_tips[8] = " Установленный за перекрестком знак 3.4 «Движение грузовых автомобилей запрещено» (без указания массы на знаке) запрещает движение в прямом направлении только грузовым автомобилям с разрешенной максимальной массой более 3,5 т, а знак 6.15.2 «Направление движения для грузовых автомобилей» перед перекрестком указывает для таких автомобилей рекомендуемое направление движения для объезда закрытого для них участка дороги. Таким образом, Вы на этом перекрестке можете двигаться в любом направлении (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[8] = "2";
+            a_length[8] = "3";
+            a_answers[8][0] = " Только направо.";
+            a_answers[8][1] = " Направо, налево и в обратном направлении.";
+            a_answers[8][2] = " В любом.";
+            q_id[9] = 10;
+            q_idb[9] = 13;
+            q_img[9] = 1;
+            q_img_name[9] = "11_31.png";
+            q_nq[9] = 10;
+            q_quest[9] = "Двигаясь в населенном пункте, Вы можете продолжить движение:";
+            q_tips[9] = " В населенном пункте Вы можете использовать наиболее удобную полосу движения (п.9.4). На этом перекрестке знак 4.1.4 «Движение прямо или направо» разрешает движение только в направлениях А и Б. Несмотря на наличие разметки 1.11, обращенной к Вам прерывистой линией, разворот на перекрестке запрещен, поскольку разметка разрешает пересекать ее ТС выезжающим на перекресток справа и поворачивающим налево (Приложения 1 и 2, ГОСТ Р 52289-2004). Повернуть направо нельзя, так как перед этим поворотом Вы должны были заблаговременно перестроиться на правую полосу (п.8.5).";
+            a_t[9] = "0";
+            a_length[9] = "3";
+            a_answers[9][0] = " Только в направлении Б.";
+            a_answers[9][1] = " В направлениях А или Б.";
+            a_answers[9][2] = " В любом направлении из указанных.";
+            q_id[10] = 11;
+            q_idb[10] = 13;
+            q_img[10] = 1;
+            q_img_name[10] = "11_32.png";
+            q_nq[10] = 11;
+            q_quest[10] = "Этот знак указывает:";
+            q_tips[10] = " Информационный знак 6.21.1 «Направление движения к аварийному выходу» указывает направление к аварийному выходу и расстояние до него (Приложение 1).";
+            a_t[10] = "2";
+            a_length[10] = "3";
+            a_answers[10][0] = " Расстояние до конца тоннеля.";
+            a_answers[10][1] = " Расстояние до места аварийной остановки.";
+            a_answers[10][2] = " Направление движения к аварийному выходу и расстояние до него.";
+            q_id[11] = 12;
+            q_idb[11] = 13;
+            q_img[11] = 1;
+            q_img_name[11] = "11_33.png";
+            q_nq[11] = 12;
+            q_quest[11] = "До какого места действует требование данного знака?";
+            q_tips[11] = " Знак 5.31 «Зона с ограничением максимальной скорости» относится к так называемым зональным знакам, требования которых действуют на всей территории (участке дороги) до выезда из зоны, обозначенной знаком 5.32 «Конец зоны с ограничением максимальной скорости» (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[11] = "1";
+            a_length[11] = "3";
+            a_answers[11][0] = " До ближайшего по ходу движения перекрестка.";
+            a_answers[11][1] = " До места установки знака «Конец зоны с ограничением максимальной скорости».";
+            a_answers[11][2] = " До конца населенного пункта.";
+            q_id[12] = 13;
+            q_idb[12] = 13;
+            q_img[12] = 1;
+            q_img_name[12] = "11_34.png";
+            q_nq[12] = 13;
+            q_quest[12] = "Этот знак:";
+            q_tips[12] = " Знак 2.6 «Преимущество встречного движения» обязывает уступить дорогу встречным ТС, находящимся не только непосредственно на узком участке дороги, но и на противоположном подъезде к нему (Приложение 1, ГОСТ Р 52289-2004). Вы не должны вынуждать их тормозить или изменять направление движения (п.1.2 термин «Уступить дорогу (не создавать помех)»).";
+            a_t[12] = "2";
+            a_length[12] = "3";
+            a_answers[12][0] = " Предупреждает Вас о наличии узкого участка дороги, но не устанавливает очередность движения.";
+            a_answers[12][1] = " Запрещает Вам проезд через мост.";
+            a_answers[12][2] = " Обязывает Вас уступить дорогу встречному транспортному средству.";
+            q_id[13] = 14;
+            q_idb[13] = 13;
+            q_img[13] = 1;
+            q_img_name[13] = "11_35.png";
+            q_nq[13] = 14;
+            q_quest[13] = "В каких направлениях Вам можно продолжить движение на перекрестке, управляя грузовым автомобилем?";
+            q_tips[13] = " Знак 5.13.2 «Выезд на дорогу с полосой для маршрутных транспортных средств» информирует о том, что на пересекаемой дороге общий поток ТС движется справа налево, а маршрутные ТС по специально выделенной полосе – слева направо (Приложение 1). Вам движение по такой полосе, а следовательно, и поворот направо запрещены (п.18.2). Таким образом, на этом перекрестке Вы можете продолжить движение прямо, налево и в обратном направлении.";
+            a_t[13] = "1";
+            a_length[13] = "3";
+            a_answers[13][0] = " Только налево и в обратном направлении.";
+            a_answers[13][1] = " Прямо, налево и в обратном направлении.";
+            a_answers[13][2] = " В любом направлении.";
+            q_id[14] = 15;
+            q_idb[14] = 13;
+            q_img[14] = 1;
+            q_img_name[14] = "11_36.png";
+            q_nq[14] = 15;
+            q_quest[14] = "Какие из указанных знаков разрешают движение мопедов?";
+            q_tips[14] = " Знаки А (5.1 «Автомагистраль») и Б (5.3 «Дорога для автомобилей») обозначают дороги, по которым движение мопедов запрещено (пп.16.1 и 16.3). Знак Г (3.9 «Движение на велосипедах запрещено») также запрещает движение мопедов. Только знак В (3.5 «Движение мотоциклов запрещено») не ограничивает движение мопедов (Приложение 1).";
+            a_t[14] = "0";
+            a_length[14] = "4";
+            a_answers[14][0] = " Только В.";
+            a_answers[14][1] = " Только Г.";
+            a_answers[14][2] = " Б, В и Г.";
+            a_answers[14][3] = " Все.";
+            q_id[15] = 16;
+            q_idb[15] = 13;
+            q_img[15] = 1;
+            q_img_name[15] = "11_37.png";
+            q_nq[15] = 16;
+            q_quest[15] = "Как следует поступить, если Вам необходимо развернуться?";
+            q_tips[15] = " На этом перекрестке пересекаемая дорога имеет одну проезжую часть, следовательно, знак 4.1.1 «Движение прямо» запрещает Вам разворот на перекрестке. Этот знак не вводит каких-либо ограничений на следующий за перекрестком участок дороги, где и можно развернуться (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[15] = "1";
+            a_length[15] = "3";
+            a_answers[15][0] = " Развернуться на этом перекрестке при отсутствии на нем других транспортных средств.";
+            a_answers[15][1] = " Проехать прямо и развернуться за перекрестком.";
+            a_answers[15][2] = " Проехать прямо и развернуться только на следующем перекрестке.";
+            q_id[16] = 17;
+            q_idb[16] = 13;
+            q_img[16] = 1;
+            q_img_name[16] = "11_38.png";
+            q_nq[16] = 17;
+            q_quest[16] = "Разрешена ли Вам стоянка в указанном месте?";
+            q_tips[16] = " Зона действия знака 3.27 «Остановка запрещена» распространяется до ближайшего перекрестка. Разрыв в разделительной полосе дороги перекрестком не считается (п.1.2 термины «Перекресток» и «Разделительная полоса»), поэтому, поставив автомобиль на стоянку в указанном месте, Вы нарушите требование запрещающего знака (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[16] = "2";
+            a_length[16] = "3";
+            a_answers[16][0] = " Разрешена.";
+            a_answers[16][1] = " Разрешена только с включенной аварийной сигнализацией.";
+            a_answers[16][2] = " Запрещена.";
+            q_id[17] = 18;
+            q_idb[17] = 13;
+            q_img[17] = 1;
+            q_img_name[17] = "11_39.png";
+            q_nq[17] = 18;
+            q_quest[17] = "Эта табличка распространяет действие установленного с ней знака:";
+            q_tips[17] = " Табличка 8.4.3 «Вид транспортного средства» распространяет действие знака на легковые автомобили, а также грузовые автомобили с разрешенной максимальной массой не более 3,5 т. Этим она отличается от табличек 8.6.2-8.6.9 «Способ постановки транспортного средства на стоянку», которые определяют порядок стоянки только легковых автомобилей и мотоциклов (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[17] = "1";
+            a_length[17] = "3";
+            a_answers[17][0] = " Только на легковые автомобили.";
+            a_answers[17][1] = " На легковые автомобили, а также на грузовые автомобили с разрешенной максимальной массой не более 3,5 т.";
+            a_answers[17][2] = " На легковые автомобили и мотоциклы.";
+            q_id[18] = 19;
+            q_idb[18] = 13;
+            q_img[18] = 1;
+            q_img_name[18] = "11_40.png";
+            q_nq[18] = 19;
+            q_quest[18] = "О чем предупреждают Вас эти знаки?";
+            q_tips[18] = " Знак 1.25 «Дорожные работы» предупреждает Вас о том, что на дороге ведутся ремонтные работы, а табличка 8.12 «Опасная обочина» уточняет, что работы ведутся на обочине, в связи с чем съезд на нее опасен, хотя и возможен (Приложение 1, ГОСТ Р 52289-2004).";
+            a_t[18] = "1";
+            a_length[18] = "3";
+            a_answers[18][0] = " Остановка транспортных средств на обочине запрещена.";
+            a_answers[18][1] = " Съезд на обочину опасен в связи с проведением на ней дорожных работ.";
+            a_answers[18][2] = " В месте производства дорожных работ стоянка запрещена.";
+            q_id[19] = 20;
+            q_idb[19] = 13;
+            q_img[19] = 1;
+            q_img_name[19] = "13_1.png";
+            q_nq[19] = 20;
+            q_quest[19] = "По какой траектории Вам разрешается выполнить поворот налево?";
+            q_tips[19] = " Знак 5.7.2 «Выезд на дорогу с односторонним движением» информирует о том, что на пересекаемой проезжей части движение осуществляется в этом направлении не только по правой, но и по левой полосе (Приложение 1). Следовательно, Вы можете поворачивать налево по любой из двух траекторий. Требование двигаться при повороте по возможности ближе к краю проезжей части распространяется только на поворот направо (п.8.6).";
+            a_t[19] = "2";
+            a_length[19] = "3";
+            a_answers[19][0] = " Только по А.";
+            a_answers[19][1] = " Только по Б.";
+            a_answers[19][2] = " По любой из указанных.";
+            var q_img_l = 0;
+            var q_img_l_load = [];
+            var load_img_id;
+            Start();
+        </script>
+    </body>
+</html>

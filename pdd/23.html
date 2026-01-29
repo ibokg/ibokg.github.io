@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Новые билеты ПДД</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №23</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+            <div class="dropdown" >
+      <button class="dropbtn">RU</button>
+      <div class="dropdown-content">
+      <a href="#">RU</a>
+      <a href="23kg.html">KG</a>
+
+      </div>
+    </div>
+
+
+
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+                <div class="menu-block-bilets">Выберите билет:</div>
+                <div class="menu-block-bilets-con">Категория ABM</div>
+                <button type="button" onclick="openStuff();" class="btn btn-outline-secondary">Выбрать рандомый билет</button>
+                          <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                       <span class="span-bilet" id="select-bilet30"><span> <a href="30.html"><big><strong>30</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+        <div></div>
+    </div>
+    <script src="script/site.min.js?ver=1.0"></script>
+    <script src="script/HintsRu.min.js?ver=1.0"></script>
+    <script>
+        var MyTime = 0;
+        var MyWrongs = 0;
+        var MySocialText = "";
+        var category_abmcd = 0;
+        var g_complitequests = 0;
+        var g_pause_active = false;
+        var res_win = 0;
+        var res_score_count_id;
+        var res_score = 0;
+        var res_score_final = 0;
+        var res_star = 0;
+        var g_registered = 0;
+        var g_global_rezim = 5;
+        var q_length = 20;
+        var q_id = [];
+        var q_idb = [];
+        var q_img = [];
+        var q_img_src = [];
+        var q_img_name = [];
+        var q_nq = [];
+        var q_quest = [];
+        var q_tips = [];
+        var q_qnum_id = -1;
+        var a_length = [];
+        var a_t = [];
+        var a_answers = [];
+        var q_nq_done = [];
+        var q_done = false;
+        var q_length_p5 = 0;
+        var q_id_p5 = [];
+        var q_idb_p5 = [];
+        var q_img_p5 = [];
+        var q_img_src_p5 = [];
+        var q_img_name_p5 = [];
+        var q_nq_p5 = [];
+        var q_quest_p5 = [];
+        var q_tips_p5 = [];
+        var q_qnum_id_p5 = -1;
+        var a_length_p5 = [];
+        var a_t_p5 = [];
+        var a_answers_p5 = [];
+        var q_nq_done_p5 = [];
+        var q_done_p5 = false;
+        var g_wrongs = [];
+        var g_wronrs_cur_counter = 0;
+        var g_wrongs_counter = 0;
+        var g_rights_counter = 0;
+        var g_global_update = 1;
+        var q_block_mistake = [];
+        var d_click_answer = 0;
+        var g_mistake = 0;
+        var g_block_p5 = 0;
+        var end_plus_exam = true;
+        var plus_end_mistake = false;
+        for (i = 0; i < q_length; i++) {
+            a_answers[i] = [];
+        }q_id[0] = 1;
+        q_idb[0] = 23;
+        q_img[0] = 1;
+        q_img_name[0] = "17_34.png";
+        q_nq[0] = 1;
+        q_quest[0] = "Данные знаки предупреждают о приближении:";
+        q_tips[0] = " Знак 1.1 «Железнодорожный переезд со шлагбаумом» вне населенных пунктов устанавливается на расстоянии от 150 до 300 м до переезда. Кроме того, такой же знак устанавливается повторно на расстоянии не менее 50 м до переезда. Знаки 1.4.1-1.4.6 «Приближение к железнодорожному переезду» являются дополнительным предупреждением о приближении к переезду. Они применяются только вне населенных пунктов (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[0] = "1";
+        a_length[0] = "3";
+        a_answers[0][0] = " К месту производства работ на дороге.";
+        a_answers[0][1] = " К железнодорожному переезду со шлагбаумом.";
+        a_answers[0][2] = " К железнодорожному переезду без шлагбаума.";
+        q_id[1] = 2;
+        q_idb[1] = 23;
+        q_img[1] = 1;
+        q_img_name[1] = "17_35.png";
+        q_nq[1] = 2;
+        q_quest[1] = "Действие каких из указанных знаков не распространяется на транспортные средства, управляемые инвалидами I и II групп или перевозящие таких инвалидов, если на транспортных средствах установлен опознавательный знак «Инвалид»?";
+        q_tips[1] = " Действие знаков 3.2 «Движение запрещено» (Б) и 3.28 «Стоянка запрещена» (Г) не распространяется на ТС, управляемые инвалидами I и II групп или перевозящие таких инвалидов. В целях информирования других участников движения и сотрудников ГУОБДД МВД КР на такие ТС следует устанавливать опознавательный знак «Инвалид» (ОП, п.8). В тоже время на указанные ТС распространяется действие знаков 3.1 «Въезд запрещен» (А) и 3.27 «Остановка запрещена» (В) (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[1] = "1";
+        a_length[1] = "4";
+        a_answers[1][0] = " А и Б.";
+        a_answers[1][1] = " Б и Г.";
+        a_answers[1][2] = " Б, В и Г.";
+        a_answers[1][3] = " Всех.";
+        q_id[2] = 3;
+        q_idb[2] = 23;
+        q_img[2] = 1;
+        q_img_name[2] = "17_36.png";
+        q_nq[2] = 3;
+        q_quest[2] = "Вы можете продолжить движение по крайней левой полосе:";
+        q_tips[2] = " Знак 5.15.2 «Направления движения по полосе», расположенный над крайней левой полосой, кроме поворота налево разрешает Вам и разворот (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[2] = "2";
+        a_length[2] = "3";
+        a_answers[2][0] = " Только налево.";
+        a_answers[2][1] = " Только в обратном направлении.";
+        a_answers[2][2] = " Налево или в обратном направлении.";
+        q_id[3] = 4;
+        q_idb[3] = 23;
+        q_img[3] = 1;
+        q_img_name[3] = "17_37.png";
+        q_nq[3] = 4;
+        q_quest[3] = "О чем предупреждает дорожный знак?";
+        q_tips[3] = " Знак 1.8. «Светофорное регулирование» предупреждает о том, что впереди находится перекресток, пешеходный переход или участок дороги, движение на котором регулируется светофором (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[3] = "2";
+        a_length[3] = "4";
+        a_answers[3][0] = " Светофор неисправен.";
+        a_answers[3][1] = " Через 150-300 м полоса проезжей части, по которой движение регулируется реверсивным светофором.";
+        a_answers[3][2] = " Впереди перекресток, пешеходный переход или участок дороги регулируемые светофором.";
+        a_answers[3][3] = " Впереди железнодорожный переезд со светофором.";
+        q_id[4] = 5;
+        q_idb[4] = 23;
+        q_img[4] = 1;
+        q_img_name[4] = "17_38.png";
+        q_nq[4] = 5;
+        q_quest[4] = "Этот знак предупреждает о приближении к тоннелю, в котором:";
+        q_tips[4] = " Знак 1.31 «Тоннель» предназначен для предупреждения о приближении к тоннелю, в котором нет искусственного освещения или видимость въездного портала которого ограничена. Поскольку в данной ситуации портал виден хорошо, то, следовательно, этот тоннель не освещается (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[4] = "1";
+        a_length[4] = "3";
+        a_answers[4][0] = " Будет затруднен разъезд со встречными транспортными средствами.";
+        a_answers[4][1] = " Отсутствует искусственное освещение.";
+        a_answers[4][2] = " Очередность движения регулируется светофором.";
+        q_id[5] = 6;
+        q_idb[5] = 23;
+        q_img[5] = 1;
+        q_img_name[5] = "17_39.png";
+        q_nq[5] = 6;
+        q_quest[5] = "Вы имеете право продолжить движение на перекрестке:";
+        q_tips[5] = " Из четырех предложенных направлений Вы можете двигаться только в двух – А и В. Поворот направо на перекрестке (направление Г) запрещен знаком 3.18.1 «Поворот направо запрещен» (Приложение 1, ГОСТ Р 52289-2004). При движении в направлении Б Вы оказались бы левее разделительной полосы, т.е. на проезжей части, предназначенной для встречного движения (п.1.4).";
+        a_t[5] = "1";
+        a_length[5] = "3";
+        a_answers[5][0] = " Только в направлении В.";
+        a_answers[5][1] = " В направлениях А и В.";
+        a_answers[5][2] = " Во всех указанных направлениях, кроме Г.";
+        q_id[6] = 7;
+        q_idb[6] = 23;
+        q_img[6] = 1;
+        q_img_name[6] = "17_40.png";
+        q_nq[6] = 7;
+        q_quest[6] = "Какие из указанных знаков разрешают выполнить поворот налево?";
+        q_tips[6] = " Повернуть налево Вам разрешают все знаки: знак А (3.19 «Разворот запрещен»), не запрещающий поворот налево; Б (6.8.3 «Тупик»), информирующий, что данная дорога не имеет сквозного проезда; В (5.13.2 «Выезд на дорогу с полосой для маршрутных транспортных средств»), показывающий, что по левой полосе, навстречу основному потоку ТС, осуществляется движение автобусов и (или) троллейбусов (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[6] = "3";
+        a_length[6] = "4";
+        a_answers[6][0] = " Только А.";
+        a_answers[6][1] = " А и Б.";
+        a_answers[6][2] = " Б и В.";
+        a_answers[6][3] = " Все.";
+        q_id[7] = 8;
+        q_idb[7] = 23;
+        q_img[7] = 1;
+        q_img_name[7] = "17_41.png";
+        q_nq[7] = 8;
+        q_quest[7] = "Вам разрешено продолжить движение на перекрестке, управляя легковым автомобилем:";
+        q_tips[7] = " Знак 4.1.1 «Движение прямо» разрешает Вам на этом перекрестке продолжить движение только в прямом направлении (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[7] = "0";
+        a_length[7] = "4";
+        a_answers[7][0] = " Только прямо.";
+        a_answers[7][1] = " Прямо и налево.";
+        a_answers[7][2] = " Прямо и в обратном направлении.";
+        a_answers[7][3] = " В любом направлении.";
+        q_id[8] = 9;
+        q_idb[8] = 23;
+        q_img[8] = 1;
+        q_img_name[8] = "17_42.png";
+        q_nq[8] = 9;
+        q_quest[8] = "Какие из указанных знаков разрешают разворот?";
+        q_tips[8] = " Знак А (4.1.3 «Движение налево») разрешает разворот, поскольку предписывающие знаки, разрешающие поворот налево, разрешают и разворот. Знак Б (3.18.2 «Поворот налево запрещен») запрещает поворот налево, но не разворот. Знак В (5.7.2 «Выезд на дорогу с односторонним движением») также не запрещает разворот (Приложение 1, ГОСТ Р 52289-2004). Таким образом, все знаки, показанные на рисунке, не запрещают выполнить маневр разворота.";
+        a_t[8] = "2";
+        a_length[8] = "3";
+        a_answers[8][0] = " Только А.";
+        a_answers[8][1] = " А и В.";
+        a_answers[8][2] = " Все.";
+        q_id[9] = 10;
+        q_idb[9] = 23;
+        q_img[9] = 1;
+        q_img_name[9] = "17_43.png";
+        q_nq[9] = 10;
+        q_quest[9] = "Поставить на стоянку указанным на табличке способом можно:";
+        q_tips[9] = " В соответствии с п.12.2 Правил любым грузовым автомобилям и автобусам запрещено использовать для стоянки край тротуара. Действие знака 6.4 «Место стоянки» с табличкой 8.6.3 «Способ постановки транспортного средства на стоянку», распространяется только на легковые автомобили и мотоциклы (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[9] = "0";
+        a_length[9] = "3";
+        a_answers[9][0] = " Только легковые автомобили и мотоциклы.";
+        a_answers[9][1] = " Все транспортные средства, кроме грузовых автомобилей с разрешенной максимальной массой более 3,5 т.";
+        a_answers[9][2] = " Любые транспортные средства.";
+        q_id[10] = 11;
+        q_idb[10] = 23   ;
+        q_img[10] = 0;
+        q_img_name[10] = "0";
+        q_nq[10] = 11;
+        q_quest[10] = "Водительское удостоверение какой категории (подкатегории) должен иметь водитель для управления мотоциклами с рабочим объемом двигателя, превышающим 125 см3, и максимальной мощностью, превышающей 11 кВт?";
+        q_tips[10] = " В соответствии со статьей 25 Закона КР «О дорожном движении в Кыргызской Республике» и приложением 6 к Конвенции о дорожном движении категория «А» дает право управления мотоциклами, подкатегория «А1» - легкими мотоциклами с рабочим объемом двигателя, не превышающим 125 см3, и максимальной мощностью, не превышающей 11 кВт, подкатегория «В1» - моторизованными трициклами и квадрициклами.";
+        a_t[10] = "1";
+        a_length[10] = "4";
+        a_answers[10][0] = " Только подкатегории «A1».";
+        a_answers[10][1] = " Только категории «A».";
+        a_answers[10][2] = " Категории «A» или подкатегории «B1».";
+        a_answers[10][3] = " Категории «A» или подкатегории «A1» и водительском стаже более одного года.";
+        q_id[11] = 12;
+        q_idb[11] = 23   ;
+        q_img[11] = 0;
+        q_img_name[11] = "0";
+        q_nq[11] = 12;
+        q_quest[11] = "В каких случаях запрещается управлять велосипедом?";
+        q_tips[11] = " Велосипедисту запрещается управлять велосипедом в состоянии алкогольного или наркотического опьянения, под воздействием лекарственных препаратов, ухудшающих реакцию и внимание, в болезненном или утомленном состоянии, ставящим под угрозу безопасность движения (п.2.8 и п.1.2 термины «Велосипед», «Водитель» и «Транспортное средство»).";
+        a_t[11] = "1";
+        a_length[11] = "4";
+        a_answers[11][0] = " Только в состоянии алкогольного или наркотического опьянения, под воздействием лекарственных препаратов, ухудшающих реакцию и внимание.";
+        a_answers[11][1] = " В состоянии алкогольного или наркотического опьянения, под воздействием лекарственных препаратов, ухудшающих реакцию и внимание, в болезненном или утомленном состоянии, ставящим под угрозу безопасность движения.";
+        a_answers[11][2] = " Только в состоянии алкогольного или наркотического опьянения, в болезненном или утомленном состоянии, ставящим под угрозу безопасность движения.";
+        a_answers[11][3] = " Только в состоянии алкогольного или наркотического опьянения.";
+        q_id[12] = 13;
+        q_idb[12] = 23   ;
+        q_img[12] = 0;
+        q_img_name[12] = "0";
+        q_nq[12] = 13;
+        q_quest[12] = "Водительское удостоверение какой категории (подкатегории) должен иметь водитель для управления мотоциклами с рабочим объемом двигателя, не превышающим 125 см3, и максимальной мощностью, не превышающей 11 кВт?";
+        q_tips[12] = " В соответствии со статьей 25 Закона КР «О дорожном движении в Кыргызской Республике» и приложением 6 к Конвенции о дорожном движении категория «А» дает право управления мотоциклами, «В» - автомобилями, за исключением ТС, относящихся к категории «А», разрешенная максимальная масса которых не превышает 3,5 т и число сидячих мест которых, помимо виденья водителя, не превышает восьми. Подкатегория «А1» дает право управления легкими мотоциклами с рабочим объемом двигателя, не превышающим 125 см3, и максимальной мощностью, не превышающей 11 кВт, «В1» - моторизованными трициклами и квадрициклами.";
+        a_t[12] = "0";
+        a_length[12] = "4";
+        a_answers[12][0] = " Категории «A» или подкатегории «A1».";
+        a_answers[12][1] = " Только подкатегории «A1».";
+        a_answers[12][2] = " Только подкатегории «B1».";
+        a_answers[12][3] = " Только категории «В».";
+        q_id[13] = 14;
+        q_idb[13] = 23   ;
+        q_img[13] = 0;
+        q_img_name[13] = "0";
+        q_nq[13] = 14;
+        q_quest[13] = "Какие действия при дорожно-транспортном происшествии должны немедленно осуществить водители, причастные к нему?";
+        q_tips[13] = " При ДТП водители, причастные к нему, обязаны немедленно остановить (не трогать с места) ТС, включить аварийную сигнализацию и выставить знак аварийной остановки (мигающий красный фонарь), а также не перемещать предметы, имеющие отношение к ДТП (пп.2.6, 7.1 и 7.2).";
+        a_t[13] = "1";
+        a_length[13] = "3";
+        a_answers[13][0] = " Освободить проезжую часть.";
+        a_answers[13][1] = " Остановить (не трогать с места) транспортное средство, включить аварийную сигнализацию и выставить знак аварийной остановки.";
+        a_answers[13][2] = " Сообщить о случившемся в милицию.";
+        q_id[14] = 15;
+        q_idb[14] = 23   ;
+        q_img[14] = 0;
+        q_img_name[14] = "0";
+        q_nq[14] = 15;
+        q_quest[14] = "Какое удостоверение достаточно иметь водителю, управляющему легковым автомобилем с прицепом, разрешенная максимальная масса которого не превышает 750 кг?";
+        q_tips[14] = " В соответствии со статьей 25 Закона КР «О дорожном движении в Кыргызской Республике» и приложением 6 к Конвенции о дорожном движении для управления легковым автомобилем с прицепом, имеющим разрешенную максимальную массу, не превышающую 750 кг, достаточно иметь водительское удостоверение на право управления ТС категории «В».";
+        a_t[14] = "1";
+        a_length[14] = "3";
+        a_answers[14][0] = " На право управления транспортным средством подкатегории «B1».";
+        a_answers[14][1] = " На право управления транспортным средством категории «В».";
+        a_answers[14][2] = " На право управления транспортным средством категории «BE».";
+        q_id[15] = 16;
+        q_idb[15] = 23   ;
+        q_img[15] = 0;
+        q_img_name[15] = "0";
+        q_nq[15] = 16;
+        q_quest[15] = "На дорогах без искусственного освещения дальнейшее движение транспортного средства (даже к месту стоянки или ремонта) при негорящих (отсутствующих) фарах и задних габаритных огнях запрещается:";
+        q_tips[15] = " С негорящими или отсутствующими фарами и задними габаритными огнями запрещается дальнейшее движение ТС в темное время суток на дорогах без искусственного освещения и в условиях недостаточной видимости (п.2.3.2).";
+        a_t[15] = "2";
+        a_length[15] = "3";
+        a_answers[15][0] = " Только в условиях недостаточной видимости.";
+        a_answers[15][1] = " Только в темное время суток.";
+        a_answers[15][2] = " В обоих перечисленных случаях.";
+        q_id[16] = 17;
+        q_idb[16] = 23   ;
+        q_img[16] = 0;
+        q_img_name[16] = "0";
+        q_nq[16] = 17;
+        q_quest[16] = "Какое удостоверение достаточно иметь водителю, управляющему квадрициклом?";
+        q_tips[16] = " В соответствии со статьей 25 Закона КР «О дорожном движении в Кыргызской Республике» и приложением 6 к Конвенции о дорожном движении для управления моторизованным трициклом и квадрициклом, достаточно иметь водительское удостоверение на право управления ТС подкатегории «В1».";
+        a_t[16] = "1";
+        a_length[16] = "4";
+        a_answers[16][0] = " На право управления транспортным средством категории «А».";
+        a_answers[16][1] = " На право управления транспортным средством подкатегории «B1».";
+        a_answers[16][2] = " На право управления транспортным средством категории «С».";
+        a_answers[16][3] = " На право управления транспортным средством категории «D».";
+        q_id[17] = 18;
+        q_idb[17] = 23   ;
+        q_img[17] = 0;
+        q_img_name[17] = "0";
+        q_nq[17] = 18;
+        q_quest[17] = "При возникновении какой неисправности запрещено дальнейшее движение транспортного средства даже до места ремонта или стоянки?";
+        q_tips[17] = " При недействующем рулевом управлении запрещено дальнейшее движение даже до места ремонта или стоянки (п.2.3.2).";
+        a_t[17] = "1";
+        a_length[17] = "3";
+        a_answers[17][0] = " Не работает стеклоподъемник.";
+        a_answers[17][1] = " Не действует рулевое управление.";
+        a_answers[17][2] = " Неисправен глушитель.";
+        q_id[18] = 19;
+        q_idb[18] = 23   ;
+        q_img[18] = 0;
+        q_img_name[18] = "0";
+        q_nq[18] = 19;
+        q_quest[18] = "При наличии каких условий в случаях вынужденной остановки транспортного средства или дорожно-транспортного происшествия водитель одевает куртку, жилет или жилет-накидку с полосами световозвращающего материала?";
+        q_tips[18] = " В Кыргызской Республике в случае вынужденной остановки ТС или ДТП вне населенных пунктов в темное время суток либо в условиях ограниченной видимости при нахождении на проезжей части или обочине водитель может одевать куртку, жилет или жилет-накидку с полосами световозвращающего материала, соответствующих требованиям ГОСТа по собственному желанию.";
+        a_t[18] = "3";
+        a_length[18] = "4";
+        a_answers[18][0] = " Если это произошло вне населенных пунктов.";
+        a_answers[18][1] = " Если это произошло в темное время суток, либо в условиях ограниченной видимости.";
+        a_answers[18][2] = " Если водитель находится на проезжей части или обочине.";
+        a_answers[18][3] = " Куртка, жилет или жилет-накидка с полосами световозвращающего материала одеваются по желанию водителя.";
+        q_id[19] = 20;
+        q_idb[19] = 23   ;
+        q_img[19] = 0;
+        q_img_name[19] = "0";
+        q_nq[19] = 20;
+        q_quest[19] = "При управлении мопедом его водителю необходимо иметь при себе в обязательном порядке:";
+        q_tips[19] = " Водитель обязан иметь при себе водительское удостоверение соответствующей категории (подкатегории) и ряд других документов при управлении механическим ТС (пп.2.1.1 и 2.2). Для управления мопедом никаких документов не требуется (п.1.2 термины «Механическое транспортное средство» и «Мопед» и примечание к п.24.1). Водителю не требуется иметь при себе медицинскую справку и документы об окончании автошколы при управлении любым ТС.";
+        a_t[19] = "2";
+        a_length[19] = "3";
+        a_answers[19][0] = " Документ об окончании автошколы и медицинскую справку о допуске к управлению транспортными средствами.";
+        a_answers[19][1] = " Водительское удостоверение, соответствующей категории (подкатегории) и регистрационные документы на транспортное средство.";
+        a_answers[19][2] = " Ни один из перечисленных документов не требуется.";
+        var q_img_l = 0;
+        var q_img_l_load = [];
+        var load_img_id;
+        Start();
+    </script>
+</body>
+</html>

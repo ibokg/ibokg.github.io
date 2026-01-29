@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Новые билеты ПДД</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №10</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+        <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Суроо №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+                 <div class="dropdown" >
+      <button class="dropbtn">KG</button>
+      <div class="dropdown-content">
+      <a href="10.html">RU</a>
+      <a href="#">KG</a>
+
+      </div>
+    </div>
+
+
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+     <div class="menu-block-bilets">Билет тандоо:</div>
+            <button type="button" onclick="openkgStuff();" class="btn btn-outline-secondary">Кокус билет тандаңыз</button>
+                 <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1kg.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2kg.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3kg.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4kg.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5kg.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6kg.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7kg.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8kg.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9kg.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10kg.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11kg.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12kg.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13kg.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14kg.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15kg.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16kg.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17kg.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18kg.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19kg.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20kg.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21kg.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22kg.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23kg.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24kg.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25kg.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26kg.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27kg.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28kg.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29kg.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+         <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+        <div></div>
+    </div>
+        <script src="script/site.min.js?ver=1.0"></script>
+        <script src="script/HintsKG.min.js?ver=1.0"></script>
+        <script>
+            var MyTime = 0;
+            var MyWrongs = 0;
+            var MySocialText = "";
+            var category_abmcd = 0;
+            var g_complitequests = 0;
+            var g_pause_active = false;
+            var res_win = 0;
+            var res_score_count_id;
+            var res_score = 0;
+            var res_score_final = 0;
+            var res_star = 0;
+            var g_registered = 0;
+            var g_global_rezim = 5;
+            var q_length = 20;
+            var q_id = [];
+            var q_idb = [];
+            var q_img = [];
+            var q_img_src = [];
+            var q_img_name = [];
+            var q_nq = [];
+            var q_quest = [];
+            var q_tips = [];
+            var q_qnum_id = -1;
+            var a_length = [];
+            var a_t = [];
+            var a_answers = [];
+            var q_nq_done = [];
+            var q_done = false;
+            var q_length_p5 = 0;
+            var q_id_p5 = [];
+            var q_idb_p5 = [];
+            var q_img_p5 = [];
+            var q_img_src_p5 = [];
+            var q_img_name_p5 = [];
+            var q_nq_p5 = [];
+            var q_quest_p5 = [];
+            var q_tips_p5 = [];
+            var q_qnum_id_p5 = -1;
+            var a_length_p5 = [];
+            var a_t_p5 = [];
+            var a_answers_p5 = [];
+            var q_nq_done_p5 = [];
+            var q_done_p5 = false;
+            var g_wrongs = [];
+            var g_wronrs_cur_counter = 0;
+            var g_wrongs_counter = 0;
+            var g_rights_counter = 0;
+            var g_global_update = 1;
+            var q_block_mistake = [];
+            var d_click_answer = 0;
+            var g_mistake = 0;
+            var g_block_p5 = 0;
+            var end_plus_exam = true;
+            var plus_end_mistake = false;
+            for (i = 0; i < q_length; i++) {
+                a_answers[i] = [];
+            }q_id[0] = 1;
+            q_idb[0] = 10;
+            q_img[0] = 1;
+            q_img_name[0] = "9_30.png";
+            q_nq[0] = 1;
+            q_quest[0] = " Айдоочуларын кайсынысы токтотууга байланыштуу эрежени бузду?";
+            a_t[0] = "3";
+            a_length[0] = "4";
+            a_answers[0][0] = " Экөө.";
+            a_answers[0][1] = " А унаанын айдоочусу гана.";
+            a_answers[0][2] = " Б унаанын айдоочусу гана.";
+            a_answers[0][3] = " Эч ким бузган жок.";
+            q_id[1] = 2;
+            q_idb[1] = 10;
+            q_img[1] = 1;
+            q_img_name[1] = "9_31.png";
+            q_nq[1] = 2;
+            q_quest[1] = "Ушул ыкма менен айдоочуга унаасын токтотконго болобу?";
+            a_t[1] = "2";
+            a_length[1] = "3";
+            a_answers[1][0] = "Болот.";
+            a_answers[1][1] = "Башка унааларга тоскоолдук жаратпаса, болот.";
+            a_answers[1][2] = "Болбойт.";
+            q_id[2] = 3;
+            q_idb[2] = 10;
+            q_img[2] = 1;
+            q_img_name[2] = "9_32.png";
+            q_nq[2] = 3;
+            q_quest[2] = "Унааны көрсөтүлгөн жерде токтотконго уруксат берилеби?";
+            a_t[2] = "0";
+            a_length[2] = "3";
+            a_answers[2][0] = " Ооба";
+            a_answers[2][1] = " Жол 100 метрден кем эмес жакшы көрүнгөндө уруксат берилет";
+            a_answers[2][2] = " Жок.";
+            q_id[3] = 4;
+            q_idb[3] = 10;
+            q_img[3] = 1;
+            q_img_name[3] = "9_33.png";
+            q_nq[3] = 4;
+            q_quest[3] = "Кайсы жерде сизге токтогонго болот?";
+            a_t[3] = "0";
+            a_length[3] = "4";
+            a_answers[3][0] = "В деп белгиленге жерде гана.";
+            a_answers[3][1] = "А жана В деп белгиленген жерде .";
+            a_answers[3][2] = "Б жана В деп белгиленген жерде.";
+            a_answers[3][3] = "Айтылып өткөн бардык белгиленген жерлерде.";
+            q_id[4] = 5;
+            q_idb[4] = 10;
+            q_img[4] = 1;
+            q_img_name[4] = "9_34.png";
+            q_nq[4] = 5;
+            q_quest[4] = "Бул жерде кууш жээк болгондуктан, ушул жерге унааны токтотуп койгонго болобу?";
+            q_tips[4] = " Вне населенного пункта на дороге, обозначенной знаком 2.1 «Главная дорога», запрещается стоянка на проезжей части (п.12.5).";
+            a_t[4] = "2";
+            a_length[4] = "3";
+            a_answers[4][0] = " Болот.";
+            a_answers[4][1] = " Күндүзү гана болот.";
+            a_answers[4][2] = " Тыюу салынат.";
+            q_id[5] = 6;
+            q_idb[5] = 10;
+            q_img[5] = 1;
+            q_img_name[5] = "9_35.png";
+            q_nq[5] = 6;
+            q_quest[5] = "Унаалар эки багытта тең жүргөн жолдо кайсы унаалардын айдоочулары токтогонго байланыштуу эрежени бузушту?";
+            a_t[5] = "2";
+            a_length[5] = "4";
+            a_answers[5][0] = "А унаанын айдоочусу гана.";
+            a_answers[5][1] = "А жана Б унаалардын айдоочулары.";
+            a_answers[5][2] = "А жана В унаалардын айдоочулары.";
+            a_answers[5][3] = "Бардык унаалардын айдоочулары";
+            q_id[6] = 7;
+            q_idb[6] = 10;
+            q_img[6] = 1;
+            q_img_name[6] = "9_36.png";
+            q_nq[6] = 7;
+            q_quest[6] = "Кайсы унаалардын айдоочулары токтотууга байланыштуу эрежени бузган жок?";
+            a_t[6] = "2";
+            a_length[6] = "4";
+            a_answers[6][0] = "Б унаанын айдоочусу гана.";
+            a_answers[6][1] = "В унаанын айдоочусу гана.";
+            a_answers[6][2] = "А жана Б унаалардын айдоочулары.";
+            a_answers[6][3] = "А жана В унаалардын айдоочулары.";
+            q_id[7] = 8;
+            q_idb[7] = 10;
+            q_img[7] = 1;
+            q_img_name[7] = "9_37.png";
+            q_nq[7] = 8;
+            q_quest[7] = "Разрешена ли Вам остановка для высадки пассажиров в указанном месте?";
+            q_tips[7] = " В населенных пунктах остановка на левой стороне дороги с одной полосой движения в каждом направлении разрешена (п.12.1). Вы можете остановиться в месте остановки маршрутных ТС, которое обозначено знаком 5.16 и разметкой 1.17 (Приложения 1 и 2), только для посадки или высадки пассажиров и при условии, что это не создаст помех движению маршрутных ТС или легковых такси (п.12.4).";
+            a_t[7] = "1";
+            a_length[7] = "3";
+            a_answers[7][0] = " Разрешена.";
+            a_answers[7][1] = " Разрешена, если при этом не будут созданы помехи для движения маршрутных транспортных средств.";
+            a_answers[7][2] = " Запрещена.";
+            q_id[8] = 9;
+            q_idb[8] = 10;
+            q_img[8] = 1;
+            q_img_name[8] = "9_38.png";
+            q_nq[8] = 9;
+            q_quest[8] = "Киши салыш үчүн тоннелде токтогонго болобу?";
+            a_t[8] = "2";
+            a_length[8] = "3";
+            a_answers[8][0] = " Болот .";
+            a_answers[8][1] = " Жеңил унаа таксини айдап баратсаңыз, болот.";
+            a_answers[8][2] = " Болбойт.";
+            q_id[9] = 10;
+            q_idb[9] = 10;
+            q_img[9] = 1;
+            q_img_name[9] = "9_39.png";
+            q_nq[9] = 10;
+            q_quest[9] = "Кайсы унаалардын айдоочулары токтотууга байланыштуу эрежени бузушту?";
+            a_t[9] = "1";
+            a_length[9] = "4";
+            a_answers[9][0] = "В унаанын айдоочусу гана";
+            a_answers[9][1] = "А и В унаалардын айдоочулары .";
+            a_answers[9][2] = "Б и В унаалардын айдоочулары .";
+            a_answers[9][3] = "Бардык унаалардын айдоочулары .";
+            q_id[10] = 11;
+            q_idb[10] = 10;
+            q_img[10] = 1;
+            q_img_name[10] = "9_40.png";
+            q_nq[10] = 11;
+            q_quest[10] = "Бул айдоочу токтотууга байланыштуу эрежени буздубу?";
+            a_t[10] = "0";
+            a_length[10] = "3";
+            a_answers[10][0] = " Бузду.";
+            a_answers[10][1] = " Унаадан белги сызыгына чейинки аралык 3 метрден кем болсо, бузду";
+            a_answers[10][2] = " Бузган жок.";
+            q_id[11] = 12;
+            q_idb[11] = 10   ;
+            q_img[11] = 0;
+            q_img_name[11] = "0";
+            q_nq[11] = 12;
+            q_quest[11] = "Унаанын кайсы жери бузулса, аны колдонууга уруксат берилет?";
+            a_t[11] = "3";
+            a_length[11] = "4";
+            a_answers[11][0] = "Май куюучу бактардын оозун жапкан капкак иштебесе";
+            a_answers[11][1] = "Айдоочунун отургучун жөнгө салган шаймандар иштебесе.";
+            a_answers[11][2] = "Жылытуу жана айнекти үйлөө шаймадары иштебесе.";
+            a_answers[11][3] = "Айнек көтөргөн шайман иштебесе.";
+            q_id[12] = 13;
+            q_idb[12] = 10   ;
+            q_img[12] = 0;
+            q_img_name[12] = "0";
+            q_nq[12] = 13;
+            q_quest[12] = "Шиналардын протекторлоруна чегилип түшүрүлгөн сүрөттүн терендиги канча болсо (эгер алар такыр эле жешилип калбаса), мототранспорттук унааларды колдонууга тыюу салынат?";
+            a_t[12] = "0";
+            a_length[12] = "4";
+            a_answers[12][0] = " 0,8 мм.";
+            a_answers[12][1] = " 1,0 мм.";
+            a_answers[12][2] = " 1,6 мм.";
+            a_answers[12][3] = " 2,0 мм.";
+            q_id[13] = 14;
+            q_idb[13] = 10   ;
+            q_img[13] = 0;
+            q_img_name[13] = "0";
+            q_nq[13] = 14;
+            q_quest[13] = "Өрт өчүргүчү жок болсо, саналып өткөн кайсы унааларга айдаганга уруксат берилет?";
+            a_t[13] = "1";
+            a_length[13] = "3";
+            a_answers[13][0] = "Капталында чиркегичи жок мотоциклдерге гана.";
+            a_answers[13][1] = "Бардык мотоциклдерге.";
+            a_answers[13][2] = "Бардык мотоциклдерге жана и жеңил унааларга.";
+            q_id[14] = 15;
+            q_idb[14] = 10   ;
+            q_img[14] = 0;
+            q_img_name[14] = "0";
+            q_nq[14] = 15;
+            q_quest[14] = "Кайсы учурда унааны сизге пайдаланууга уруксат берилет?";
+            a_t[14] = "3";
+            a_length[14] = "4";
+            a_answers[14][0] = "Тышкы жарык берген каражаттар булганганда.";
+            a_answers[14][1] = "Фаралардын жөндөөлөрү талаптарга туура келбегенде.";
+            a_answers[14][2] ="Унаадагы жарык берүүчү каражаттарга туура келбеген жарыкты текши жайган диффузорлор же лампалар колдонулганда.";
+            a_answers[14][3] = " Унаанын алды жагында саргыч түстүү жарык берген шаймандар орнотулганда.";
+            q_id[15] = 16;
+            q_idb[15] = 10   ;
+            q_img[15] = 0;
+            q_img_name[15] = "0";
+            q_nq[15] = 16;
+            q_quest[15] = "Жеңил унаанын руль башкаруусунун жалпы люфту канча болсо, аны башкарууга уруксат берилет?";
+
+            a_t[15] = "0";
+            a_length[15] = "3";
+            a_answers[15][0] = " 10 градустан ашпаса.";
+            a_answers[15][1] = " 20 градустан ашпаса.";
+            a_answers[15][2] = " 25 градустан ашпаса.";
+            q_id[16] = 17;
+            q_idb[16] = 10   ;
+            q_img[16] = 0;
+            q_img_name[16] = "0";
+            q_nq[16] = 17;
+            q_quest[16] = "Төмөнкүлөрдү кайсынысы жок болсо, эң жогорку салмагы 3,5 тоннага чейин уруксат берилген жүк ташуучу унааны пайдаланууга жол берилет?";
+            a_t[16] = "3";
+            a_length[16] = "4";
+            a_answers[16][0] = "Медициналык аптечкасы жок болсо.";
+            a_answers[16][1] = "Өрт өчүргүчү жок болсо.";
+            a_answers[16][2] = "Авариялык токтоп калуу белгиси жок болсо.";
+            a_answers[16][3] = "Артка жылып кеткенге тоскоолдук кылган таянычтары жок болсо.";
+            q_id[17] = 18;
+            q_idb[17] = 10   ;
+            q_img[17] = 0;
+            q_img_name[17] = "0";
+            q_nq[17] = 18;
+            q_quest[17] = "Кайсы учурларда транспорттук каражатты колдонууга уруксат берилет?";
+            a_t[17] = "2";
+            a_length[17] = "4";
+            a_answers[17][0] = "Иштелип чыккан газда зыяндуу заттар болсо же алардын түтүнү белгиленген ченемдерден ашып кетсе";
+            a_answers[17][1] = "Азыктандыруу түтүгүндө (май куюу түтүгүндө) жылчыктар, жыртык-тешиктер болсо.";
+            a_answers[17][2] = "Муздаткан суюктуктун температурасынын көрсөткүчү иштебесе.";
+            a_answers[17][3] = "Иштелип чыккан газдардын сыртка чыгаруу системасы жарактан чыкса.";
+            q_id[18] = 19;
+            q_idb[18] = 10   ;
+            q_img[18] = 0;
+            q_img_name[18] = "0";
+            q_nq[18] = 19;
+            q_quest[18] = "Унааңыздын кайсы жери бузулуп калса, унаа оңдогон жерге чейин же унаа токтоочу аянтка чейин барганга тыюу салынат?";
+            a_t[18] = "0";
+            a_length[18] = "3";
+            a_answers[18][0] = "Тормоз системасы иштебей калса";
+            a_answers[18][1] = "Иштетилип чыккан газдарды чыгаруу системасы иштебей калса";
+            a_answers[18][2] = "Айнекти жууган шайман иштебей калса";
+            q_id[19] = 20;
+            q_idb[19] = 10   ;
+            q_img[19] = 0;
+            q_img_name[19] = "0";
+            q_nq[19] = 20;
+            q_quest[19] = "Медициналык аптечка жок болсо, саналып өткөн кайсы унааларды айдаса болот?";
+            a_t[19] = "3";
+            a_length[19] = "4";
+            a_answers[19][0] = " Автомобилдерди.";
+            a_answers[19][1] = " Автобустарды.";
+            a_answers[19][2] = "  Бардык мотоциклдерди.";
+            a_answers[19][3] = " Капталында чиркегичи жок мотоциклдерди гана.";
+            var q_img_l = 0;
+            var q_img_l_load = [];
+            var load_img_id;
+            Start();
+        </script>
+    </body>
+</html>

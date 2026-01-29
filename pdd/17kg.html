@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Новые билеты ПДД</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <div id="star_shadow"></div>
+        <div id="result-screen">
+            <div id="star">
+                <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+                    <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                         src="images/star.png"
+                                                                                         class="img-star"></div>
+                    <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                    <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                       class="img-star"></div>
+                </div>
+                <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+            </div>
+            <div id="nostar">
+                <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+            </div>
+            <div style="margin-top: 20px; text-align:center;">
+                <div><span style="color:#bbbbbb;">Испытание:</span><span
+                        style="margin-left:5px; color:#fff;">Билет №17</span></div>
+                <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                     id="res-time">n\a</span></div>
+                <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                    id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                     title="Закрыть результаты"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="all-box">
+        <div id="container-top" style="z-index: 9996; position:relative; ">
+            <span id="lines" ></span>
+            <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>
+        </div>
+        <div id="tipsmenu"> </div>
+                 <div class="dropdown" >
+      <button class="dropbtn">KG</button>
+      <div class="dropdown-content">
+      <a href="17.html">RU</a>
+      <a href="#">KG</a>
+
+      </div>
+    </div>
+        <div id="container-menu" style="z-index: 9998; display:none; position:relative;">
+            <div id="container-menu-main" style="display:block;"><br>
+     <div class="menu-block-bilets">Билет тандоо:</div>
+            <button type="button" onclick="openkgStuff();" class="btn btn-outline-secondary">Кокус билет тандаңыз</button>
+       <div id="bilets1">
+                    <span class="span-bilet" id="select-"><span> <a href="1kg.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet2"><span> <a href="2kg.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet3"><span> <a href="3kg.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                    <span class="span-bilet" id="select-bilet4"><span> <a href="4kg.html"><big><strong>4</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet5"><span> <a href="5kg.html"><big><strong>5</strong></big></a></span>
+                 <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet6"><span> <a href="6kg.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet7"><span> <a href="7kg.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet8"><span> <a href="8kg.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet9"><span> <a href="9kg.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet10"><span> <a href="10kg.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet11"><span> <a href="11kg.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet12"><span> <a href="12kg.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet13"><span> <a href="13kg.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet14"><span> <a href="14kg.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet15"><span> <a href="15kg.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet16"><span> <a href="16kg.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet17"><span> <a href="17kg.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet18"><span> <a href="18kg.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet19"><span> <a href="19kg.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet20"><span> <a href="20kg.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="21kg.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet21"><span> <a href="22kg.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet23"><span> <a href="23kg.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet24"><span> <a href="24kg.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet25"><span> <a href="25kg.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet26"><span> <a href="26kg.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet27"><span> <a href="27kg.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet28"><span> <a href="28kg.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                    <span class="span-bilet" id="select-bilet29"><span> <a href="29kg.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+
+            <div id="container-examen">
+                <div id="result-examen" style="text-align: center; display:none;"><span
+                        style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+                </div>
+                <div id="container-quest" style="display: block;">
+                    <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                    <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                    <div id="answers-block">
+                        <div id="answer0" class="answer">
+                            <ol start="1">
+                                <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                    пешеходу.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer1" class="answer">
+                            <ol start="2">
+                                <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                    средства.
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="answer2" class="answer">
+                            <ol start="3">
+                                <li>В обоих перечисленных случаях.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                        движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                        внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                        (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                        уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                    </div>
+                </div>
+                <div id="container-quests" style="position:relative; z-index:998;"><span
+                        class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                               id="quest-num1">2</span><span
+                        class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                           id="quest-num3">4</span><span
+                        class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                           id="quest-num5">6</span><span
+                        class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                           id="quest-num7">8</span><span
+                        class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                           id="quest-num9">10</span><span
+                        class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                        class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                        class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                        class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                        class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+        </div>
+        <div></div>
+    </div>
+    <script src="script/site.min.js?ver=1.0"></script>
+    <script src="script/HintsKG.min.js?ver=1.0"></script>
+    <script>
+        var MyTime = 0;
+        var MyWrongs = 0;
+        var MySocialText = "";
+        var category_abmcd = 0;
+        var g_complitequests = 0;
+        var g_pause_active = false;
+        var res_win = 0;
+        var res_score_count_id;
+        var res_score = 0;
+        var res_score_final = 0;
+        var res_star = 0;
+        var g_registered = 0;
+        var g_global_rezim = 5;
+        var q_length = 20;
+        var q_id = [];
+        var q_idb = [];
+        var q_img = [];
+        var q_img_src = [];
+        var q_img_name = [];
+        var q_nq = [];
+        var q_quest = [];
+        var q_tips = [];
+        var q_qnum_id = -1;
+        var a_length = [];
+        var a_t = [];
+        var a_answers = [];
+        var q_nq_done = [];
+        var q_done = false;
+        var q_length_p5 = 0;
+        var q_id_p5 = [];
+        var q_idb_p5 = [];
+        var q_img_p5 = [];
+        var q_img_src_p5 = [];
+        var q_img_name_p5 = [];
+        var q_nq_p5 = [];
+        var q_quest_p5 = [];
+        var q_tips_p5 = [];
+        var q_qnum_id_p5 = -1;
+        var a_length_p5 = [];
+        var a_t_p5 = [];
+        var a_answers_p5 = [];
+        var q_nq_done_p5 = [];
+        var q_done_p5 = false;
+        var g_wrongs = [];
+        var g_wronrs_cur_counter = 0;
+        var g_wrongs_counter = 0;
+        var g_rights_counter = 0;
+        var g_global_update = 1;
+        var q_block_mistake = [];
+        var d_click_answer = 0;
+        var g_mistake = 0;
+        var g_block_p5 = 0;
+        var end_plus_exam = true;
+        var plus_end_mistake = false;
+        for (i = 0; i < q_length; i++) {
+            a_answers[i] = [];
+        }q_id[0] = 1;
+        q_idb[0] = 17;
+        q_img[0] = 1;
+        q_img_name[0] = "14_22.png";
+        q_nq[0] = 1;
+        q_quest[0] = "Данная разметка обозначает:";
+        q_tips[0] = " Разметкой 1.25 обозначаются искусственные неровности на проезжей части, используемые для принудительного снижения скорости ТС внутри жилых зон, у детских учреждений и т.п. (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[0] = "1";
+        a_length[0] = "3";
+        a_answers[0][0] = " Место, где начинается (заканчивается) жилая зона.";
+        a_answers[0][1] = " Искусственную неровность на проезжей части.";
+        a_answers[0][2] = " Место, где начинается (заканчивается) зона с ограничением стоянки.";
+        q_id[1] = 2;
+        q_idb[1] = 17;
+        q_img[1] = 1;
+        q_img_name[1] = "14_23.png";
+        q_nq[1] = 2;
+        q_quest[1] = "Жолдо ушундай үзүк-үзүк чийини тартылып турса, эмне кылганга тыюу салынат?";
+        q_tips[1] = " Прерывистая линия разметки 1.5 в данной ситуации разделяет транспортные потоки противоположных направлений на дороге, имеющей две полосы, и не запрещает Вам выполнить какой-либо маневр (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[1] = "3";
+        a_length[1] = "4";
+        a_answers[1][0] = "Башка унааны ашып өткөнгө.";
+        a_answers[1][1] = "Айланып өткөнгө.";
+        a_answers[1][2] = "Кайрылганга.";
+        a_answers[1][3] = "Саналып өткөн нерселерди баарын кылганга.";
+        q_id[2] = 3;
+        q_idb[2] = 17;
+        q_img[2] = 1;
+        q_img_name[2] = "14_24.png";
+        q_nq[2] = 3;
+        q_quest[2] = "Тосмонун бетинде бул тик чийин кайсы учурларда коюлат?";
+        q_tips[2] = " Такой вертикальной разметкой 2.6 обозначают боковые поверхности дорожных ограждений во всех случаях, когда не применяется разметка 2.5, используемая только на опасных участках (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[2] = "1";
+        a_length[2] = "3";
+        a_answers[2][0] = "Жолдун кооптуу бөлүктөрүн көрсөтүш үчүн.";
+        a_answers[2][1] = "Кооптуу деп эсептелбеген жолдун бөлүктөрүн көрсөтүш үчүн.";
+        a_answers[2][2] = "Жолдун бардык бөлүктөрүндө.";
+        q_id[3] = 4;
+        q_idb[3] = 17;
+        q_img[3] = 1;
+        q_img_name[3] = "14_25.png";
+        q_nq[3] = 4;
+        q_quest[3] = "Бул белги эмнени билдирет?";
+        q_tips[3] = " На проезжую часть нанесена разметка 1.24.2, которая дублирует запрещающие знаки, в данном случае знак 3.24 «Ограничение максимальной скорости» (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[3] = "2";
+        a_length[3] = "3";
+        a_answers[3][0] = "Жолдун же маршруттун номурун.";
+        a_answers[3][1] = "Жолдун ушул бөлүгүндө канча ылдамдык менен жүрүш керектигин көрсөтөт.";
+        a_answers[3][2] = "Жолдун ушул бөлүгүндө ылдамдыкты канчага чейин жогорулатса болорун көрсөтөт.";
+        q_id[4] = 5;
+        q_idb[4] = 17;
+        q_img[4] = 1;
+        q_img_name[4] = "14_26.png";
+        q_nq[4] = 5;
+        q_quest[4] = "Жол-жол тигинен тартылган бул белги эмнени билдирет?";
+        q_tips[4] = " Разметкой 2.2 обозначают нижний край пролетного строения тоннелей, мостов и путепроводов при расстоянии от него до покрытия дороги менее 5 м (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[4] = "0";
+        a_length[4] = "3";
+        a_answers[4][0] = "Тоннелдердин, көпүрөлөрдүн жана үстү-үстүнөн кеткен жолдордун ылдыйкы чектерин көрсөтөт.";
+        a_answers[4][1] = "Жарыгы жок тоннелдерге кирип баратканыңызды көрсөтөт.";
+        a_answers[4][2] = "Коркунуч туудурган жолдогу курулмаларды билдирет.";
+        q_id[5] = 6;
+        q_idb[5] = 17;
+        q_img[5] = 1;
+        q_img_name[5] = "14_27.png";
+        q_nq[5] = 6;
+        q_quest[5] = "Унаа жүргөн жолдо тартылган А 100 деген белги эмнени билдирет?";
+        q_tips[5] = " Разметка 1.22 обозначает номер дороги (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[5] = "2";
+        a_length[5] = "3";
+        a_answers[5][0] = "Жакынкы кесилишке чейин канча аралык калганын.";
+        a_answers[5][1] = "Эл жашаган эң жакынкы конушка канча аралык калганын.";
+        a_answers[5][2] = "Жолдун номурун.";
+        q_id[6] = 7;
+        q_idb[6] = 17   ;
+        q_img[6] = 0;
+        q_img_name[6] = "0";
+        q_nq[6] = 7;
+        q_quest[6] = "Эки катар узатасынан тартылган үзгүлтүксүз сызыкты ашып өткөнгө болобу?";
+        q_tips[6] = " Сплошная двойная линия разметки 1.3 применяется для разделения транспортных потоков противоположных направлений на дорогах с четырьмя и более полосами для движения в обоих направлениях, а также с двумя или тремя полосами при ширине полос более 3,75 м. Пересекать ее запрещается во всех случаях (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[6] = "3";
+        a_length[6] = "4";
+        a_answers[6][0] = "Короодон же ага жакын жерден чыгып келатсаңыз, болот.";
+        a_answers[6][1] = "Башка унааны ашып өткөнү жатсаңыз, болот.";
+        a_answers[6][2] = "Унаалар жыш, тынбай жүрүп жатканда гана болот.";
+        a_answers[6][3] = " Тыюу салынат.";
+        q_id[7] = 8;
+        q_idb[7] = 17;
+        q_img[7] = 1;
+        q_img_name[7] = "14_29.png";
+        q_nq[7] = 8;
+        q_quest[7] = "Үзгүлтүксүз сызыктын улам узартыла баштаганы эмнени билдирет?";
+        q_tips[7] = " Линия разметки 1.6 (прерывистая линия, у которой длина штрихов в три раза больше промежутков между ними) предупреждает о приближении к сплошной линии разметки 1.1. или 1.11, которая разделяет транспортные потоки противоположных или попутных направлений (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[7] = "2";
+        a_length[7] = "3";
+        a_answers[7][0] = "Жолдун бардык иш-аракеттерге тыюу салган бөлүгүнүн башталганын.";
+        a_answers[7][1] = "Жолдун кооптуу бөлүгүнүн башталганын.";
+        a_answers[7][2] = "Бир багытта кетип бараткан унаалардын кыймылын бөлүп турган үзгүлтүксүз сызыкка жакын калганыңызды.";
+        q_id[8] = 9;
+        q_idb[8] = 17;
+        q_img[8] = 1;
+        q_img_name[8] = "14_30.png";
+        q_nq[8] = 9;
+        q_quest[8] = "Бул белги эмнени билдирет?";
+        q_tips[8] = " Желтой линией разметки 1.17 обозначаются места остановок маршрутных ТС и стоянки такси (Приложение 2, ГОСТ Р 52289-2004), на которых остановка других ТС возможна только для посадки и высадки пассажиров, если это не создаст помех движению маршрутных ТС или ТС, используемых в качестве легкового такси (п.12.4).";
+        a_t[8] = "2";
+        a_length[8] = "3";
+        a_answers[8][0] = "Жөө жүргөн кишилердин жолунун (тратуардын) чекеси менен жол жүргөнгө тыюу салган жол бөлүгүн .";
+        a_answers[8][1] = "Токтогонго тыюу салынган жерлерди.";
+        a_answers[8][2] = " Маршруттук транспорт каражаттар жана таксилер токтогон жерлерди.";
+        q_id[9] = 10;
+        q_idb[9] = 17;
+        q_img[9] = 1;
+        q_img_name[9] = "14_31.png";
+        q_nq[9] = 10;
+        q_quest[9] = " Эгер реверсивдүү светофорлор өчүп калса, эмне кылууга тийишсиз?";
+        q_tips[9] = " Следуя по полосе, обозначенной с обеих сторон разметкой 1.9 (Приложение 2, ГОСТ Р 52289-2004), направление движения по которой может изменяться на противоположное, при отключении реверсивных светофоров Вы должны немедленно перестроиться вправо на соседнюю полосу, поскольку в этом случае въезд на полосу с реверсивным движением (и соответственно движение по ней) запрещается (п.6.7).";
+        a_t[9] = "0";
+        a_length[9] = "3";
+        a_answers[9][0] = "Шак эле оң тилкеге өтүшүңүз керек.";
+        a_answers[9][1] = "Жүрүп бараткан тилкеңиз боюнча кесилишке чейин гана жүрө аласыз.";
+        a_answers[9][2] = "Каршы багытта келаткан унаалар жок болсо, жүрүп бараткан тилкеңиз боюнча жолуңузду уланта аласыз.";
+        q_id[10] = 11;
+        q_idb[10] = 17;
+        q_img[10] = 1;
+        q_img_name[10] = "14_32.png";
+        q_nq[10] = 11;
+        q_quest[10] = "Бул тоскоолдукту кандай багыт менен айланып өтө аласыз?";
+        q_tips[10] = " Дорожный знак 4.2.2 «Объезд препятствия слева» разрешает Вам пересечь линию разметки 1.1 и объехать препятствие только по траектории А. В случаях, когда значения временных дорожных знаков, размещаемых на переносной стойке, и линий разметки противоречат друг другу, водители должны руководствоваться дорожными знаками (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[10] = "0";
+        a_length[10] = "3";
+        a_answers[10][0] = "А багыты боюнча гана.";
+        a_answers[10][1] = "Б багыты боюнча гана.";
+        a_answers[10][2] = "Каалаган багыт боюнча.";
+        q_id[11] = 12;
+        q_idb[11] = 17;
+        q_img[11] = 1;
+        q_img_name[11] = "14_33.png";
+        q_nq[11] = 12;
+        q_quest[11] = "Оң жактагы тилке менен кайсы унааларга арналган?";
+        q_tips[11] = " Полоса, обозначенная знаком 5.14 «Полоса для маршрутных транспортных средств» и разметкой 1.23 (в виде буквы «А»), предназначена для движения только автобусов и троллейбусов, движущихся по установленным маршрутам с обозначенными местами остановок, т.е. маршрутных ТС (пп.18.2 и 1.2 термин «Маршрутное транспортное средство», Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[11] = "2";
+        a_length[11] = "3";
+        a_answers[11][0] = "Бардык автобустарга.";
+        a_answers[11][1] = "Бардык автобустарга жана троллейбустарга.";
+        a_answers[11][2] = "Алдын ала белгиленген маршрут боюнча жана белгиленген аялдамаларда гана токтогонго автобустарга жана троллейбустарга, ошондой эле мектеп окуучуларынын автобустарына жана жеңил унаа таксилерине.";
+        q_id[12] = 13;
+        q_idb[12] = 17;
+        q_img[12] = 1;
+        q_img_name[12] = "14_34.png";
+        q_nq[12] = 13;
+        q_quest[12] = "Бул жагдайда сизге унаалар реверсивдүү кыймыл менен жүрүп жаткан тилкеге түшкөнгө болобу?";
+        q_tips[12] = " Зеленый сигнал реверсивного светофора разрешает Вам пересечь расположенную слева линию разметки 1.9 (Приложение 2, ГОСТ Р 52289-2004) и двигаться по полосе с реверсивным движением (п.6.7).";
+        a_t[12] = "0";
+        a_length[12] = "3";
+        a_answers[12][0] = "Болот.";
+        a_answers[12][1] = "Солго жана артка кайрылыш үчүн гана болот.";
+        a_answers[12][2] = "Тыюу салынат..";
+        q_id[13] = 14;
+        q_idb[13] = 17;
+        q_img[13] = 1;
+        q_img_name[13] = "14_35.png";
+        q_nq[13] = 14;
+        q_quest[13] = "Бул жакта сизге токтогонго уруксат берилеби?";
+        q_tips[13] = " Прерывистая желтая линия разметки 1.10 обозначает места, где запрещена стоянка ТС. Остановка при этом не запрещается, поэтому Вы можете остановиться в указанном месте без каких-либо дополнительных условий (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[13] = "0";
+        a_length[13] = "4";
+        a_answers[13][0] = "Уруксат берилет.";
+        a_answers[13][1] = "Жөө жүргөн кишилердин жолуна (тратуарга) жарым-жартылай чыксаңар, уруксат берилет.";
+        a_answers[13][2] = "Башка унааларга тоскоолдук жаралбаса, уруксат берилет.";
+        a_answers[13][3] = "Тыюу салынат .";
+        q_id[14] = 15;
+        q_idb[14] = 17;
+        q_img[14] = 1;
+        q_img_name[14] = "14_36.png";
+        q_nq[14] = 15;
+        q_quest[14] = "Жолдо ушундай белги тартылып турса, сизге кайсы багытта жол жүргөнгө уруксат берилет?";
+        q_tips[14] = " Разметка 1.18 (в виде стрелы) указывает разрешенное на перекрестке направление движения по полосе. В данном случае разметка наряду с поворотом налево разрешает Вам и разворот (Приложение 2, ГОСТ Р 52289-2004).";
+        a_t[14] = "2";
+        a_length[14] = "3";
+        a_answers[14][0] = "Солго бурулганга гана.";
+        a_answers[14][1] = "Артка кайрылганга гана.";
+        a_answers[14][2] = "Солго бурулганга жана артка кайрылганга.";
+        q_id[15] = 16;
+        q_idb[15] = 17;
+        q_img[15] = 1;
+        q_img_name[15] = "14_37.png";
+        q_nq[15] = 16;
+        q_quest[15] = "«А» тамгасы түрүндөгү белги эмнени билдирет?";
+        q_tips[15] = " Разметкой 1.23 (в виде буквы «А») обозначают специальную полосу для маршрутных ТС, т.е. автобусов и троллейбусов, движущихся по установленным маршрутам с обозначенными местами остановок (п.1.2 термин «Маршрутное транспортное средство», Приложение 2, ГОСТ Р 52289-2004). Если эта полоса отделена от остальной проезжей части прерывистой линией разметки, то при поворотах ТС должны перестраиваться на нее. Разрешается также в таких местах заезжать на эту полосу при въезде на дорогу и для посадки и высадки пассажиров у правого края проезжей части при условии, что это не создаст помех маршрутным ТС (п.18.2).";
+        a_t[15] = "1";
+        a_length[15] = "3";
+        a_answers[15][0] = "Бардык автобустар үчүн атайын тилкени.";
+        a_answers[15][1] = " Маршруттук транспорт каражаттары үчүн атайын тилкени.";
+        a_answers[15][2] = "Бардык автобустарга арналган кыска жана узак убакытка токтой турган жерди.";
+        q_id[16] = 17;
+        q_idb[16] = 17;
+        q_img[16] = 1;
+        q_img_name[16] = "15_1.png";
+        q_nq[16] = 17;
+        q_quest[16] = "Бул белгилердин кайсынысы эң жогорку салмагы 3,5 тоннага чейин уруксат берилген жүк ташуучу унаага жол жүргөнгө уруксат берет?";
+        q_tips[16] = " Знак 3.1 «Въезд запрещен» (знак Б) запрещает въезд всех транспортных средств. Знак 5.3 «Дорога для автомобилей» (знак А) обозначает дороги, предназначенные для движения только автомобилей (в том числе любых грузовых), автобусов и мотоциклов. На знаке 3.4 «Движение грузовых автомобилей запрещено» (знак В) на кузове автомобиля не указана масса. В этом случае запрещается движение только грузовых автомобилей и составов транспортных средств с разрешенной максимальной массой более 3,5 т (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[16] = "1";
+        a_length[16] = "3";
+        a_answers[16][0] = "А гана.";
+        a_answers[16][1] = "А жана В.";
+        a_answers[16][2] = " Баары.";
+        q_id[17] = 18;
+        q_idb[17] = 17;
+        q_img[17] = 1;
+        q_img_name[17] = "15_2.png";
+        q_nq[17] = 18;
+        q_quest[17] = "Четки сол тилке менен баратсаңыз, кайсы багыт менен жолду улантууга болобу?";
+        q_tips[17] = " Если знак 5.15.2 «Направления движения по полосе», расположенный над крайней левой полосой, разрешает поворот налево, то из этой полосы разрешен и разворот. Таким образом, Вы можете продолжить движение на легковом автомобиле прямо, налево или в обратном направлении (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[17] = "2";
+        a_length[17] = "3";
+        a_answers[17][0] = "Солго гана.";
+        a_answers[17][1] = "Түз же солго.";
+        a_answers[17][2] = "Түз, солго же кайра артка.";
+        q_id[18] = 19;
+        q_idb[18] = 17;
+        q_img[18] = 1;
+        q_img_name[18] = "15_3.png";
+        q_nq[18] = 19;
+        q_quest[18] = "Жеңил унаа айдап баратсаңыз, кайсы багыт менен кесилиштен жолду улантканга болот?";
+        q_tips[18] = " На этом перекрестке пересекаемая дорога имеет две проезжие части (п.1.2 термин «Проезжая часть»). Знак 4.1.1 «Движение прямо» действует только на первое пересечение проезжих частей, перед которым он установлен. Следовательно, Вам запрещен только поворот направо на первую проезжую часть (направление В) (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[18] = "1";
+        a_length[18] = "3";
+        a_answers[18][0] = "Б багыты менен гана.";
+        a_answers[18][1] = "А жана Б багыты менен.";
+        a_answers[18][2] = "Б жана В багыты менен.";
+        q_id[19] = 20;
+        q_idb[19] = 17;
+        q_img[19] = 1;
+        q_img_name[19] = "15_4.png";
+        q_nq[19] = 20;
+        q_quest[19] = "Бул жол белгиси эмнени билдирет?";
+        q_tips[19] = " Круглая форма, красная кайма – это признаки принадлежности знака к группе запрещающих. Знак 3.24 «Ограничение максимальной скорости» запрещает движение со скоростью, превышающей указанную на знаке, в данном случае – более 40 км/ч (Приложение 1, ГОСТ Р 52289-2004).";
+        a_t[19] = "2";
+        a_length[19] = "3";
+        a_answers[19][0] = "Саатына 40 км менен жүрүүнү сунуштайт ";
+        a_answers[19][1] = "Саатына 40 кмден кем эмес ылдамдык менен жүрүүнү талап кылат.";
+        a_answers[19][2] = " Саатына 40 кмден ашык ылдамдык менен жүрүүгө тыюу салат.";
+        var q_img_l = 0;
+        var q_img_l_load = [];
+        var load_img_id;
+        Start();
+    </script>
+</body>
+</html>

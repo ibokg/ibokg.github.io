@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Новые билеты ПДД</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link href="css/style.min.css?ver=1.0" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+    <div id="star_shadow"></div>
+    <div id="result-screen">
+        <div id="star">
+            <div style="text-align:center; margin-left:20px; margin-right:20px; ">
+             <div style="width:30%; display:inline-block; margin-top: 42px;"><img id="res-star1"
+                                                                                     src="images/star.png"
+                                                                                     class="img-star"></div>
+                <div style="width:39%; display:inline-block;"><img id="res-star2" src="images/star_gray.png"
+                                                                   class="img-star"></div>
+                <div style="width:30%; display:inline-block;"><img id="res-star3" src="images/star_gray.png"
+                                                                   class="img-star"></div>
+            </div>
+            <div style="text-align:center; margin-top:10px;"><span id="res-score">0</span></div>
+        </div>
+        <div id="nostar">
+            <div style="text-align:center; margin-top:100px;"><span id="res-text">Экзамен провален!</span></div>
+        </div>
+        <div style="margin-top: 20px; text-align:center;">
+            <div><span style="color:#bbbbbb;">Испытание:</span><span
+                    style="margin-left:5px; color:#fff;">Билет №4</span></div>
+            <div><span style="color:#bbbbbb;">Время:</span><span style="margin-left:5px; color:#fff;"
+                                                                 id="res-time">n\a</span></div>
+            <div><span style="color:#bbbbbb;">Ошибок:</span><span style="margin-left:5px; color:#fff;" id="res-wrongs">n\a</span>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:40px;"><span id="but-repeat" style="" title="Повторить"></span><span
+                id="but-menu" style="margin-left:10%;" title="Меню"></span><span id="but-close" style="margin-left:10%;"
+                                                                                 title="Закрыть результаты"></span>
+        </div>
+
+    </div>
+</div>
+        <div class="all-box">
+    <div id="container-top" style="z-index: 9996; position:relative; ">
+        <span id="lines" ></span>
+        <span class="clock" id="timer">19:45</span><span class="whatsdo" id="info-quest">Билет №1, Вопрос №1</span>       
+    </div>
+    <div id="tipsmenu"> </div>
+ 
+            <div class="dropdown" >
+  <button class="dropbtn">RU</button>
+  <div class="dropdown-content">
+  <a href="#">RU</a>
+  <a href="4kg.html">KG</a>
+  
+  </div>
+</div>
+
+    <div id="container-menu" style="z-index: 9998; display:none; position:relative;">       
+        <div id="container-menu-main" style="display:block;"><br>
+            <div class="menu-block-bilets">Выберите билет:</div>
+            <div class="menu-block-bilets-con">Категория ABM</div>
+            <button type="button" onclick="openStuff();" class="btn btn-outline-secondary">Выбрать рандомый билет</button>
+                   <div id="bilets1">
+                <span class="span-bilet" id="select-"><span> <a href="1.html"><big><strong>1</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                <span class="span-bilet" id="select-bilet2"><span> <a href="2.html"><big><strong>2</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                <span class="span-bilet" id="select-bilet3"><span> <a href="3.html"><big><strong>3</strong></big></a> <span id="stars-bilet-menu"></span></span></span>
+                <span class="span-bilet" id="select-bilet4"><span> <a href="4.html"><big><strong>4</strong></big></a></span>
+             <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet5"><span> <a href="5.html"><big><strong>5</strong></big></a></span>
+             <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet6"><span> <a href="6.html"><big><strong>6</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet7"><span> <a href="7.html"><big><strong>7</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet8"><span> <a href="8.html"><big><strong>8</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet9"><span> <a href="9.html"><big><strong>9</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet10"><span> <a href="10.html"><big><strong>10</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet11"><span> <a href="11.html"><big><strong>11</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet12"><span> <a href="12.html"><big><strong>12</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet13"><span> <a href="13.html"><big><strong>13</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet14"><span> <a href="14.html"><big><strong>14</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet15"><span> <a href="15.html"><big><strong>15</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet16"><span> <a href="16.html"><big><strong>16</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet17"><span> <a href="17.html"><big><strong>17</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet18"><span> <a href="18.html"><big><strong>18</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet19"><span> <a href="19.html"><big><strong>19</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet20"><span> <a href="20.html"><big><strong>20</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet21"><span> <a href="21.html"><big><strong>21</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet21"><span> <a href="22.html"><big><strong>22</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet23"><span> <a href="23.html"><big><strong>23</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet24"><span> <a href="24.html"><big><strong>24</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet25"><span> <a href="25.html"><big><strong>25</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet26"><span> <a href="26.html"><big><strong>26</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet27"><span> <a href="27.html"><big><strong>27</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet28"><span> <a href="28.html"><big><strong>28</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                <span class="span-bilet" id="select-bilet29"><span> <a href="29.html"><big><strong>29</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+                           <span class="span-bilet" id="select-bilet30"><span> <a href="30.html"><big><strong>30</strong></big></a></span> <span id="stars-bilet-menu"></span></span>
+            </div>
+        </div>
+    </div>
+    <div id="box">
+ 
+        <div id="container-examen">
+            <div id="result-examen" style="text-align: center; display:none;"><span
+                    style="width: 100px; height: 100px; display: inline-block; /* background-color: green; */ border-radius: 100px; color: #01D42F; font-size: 70px; line-height: 100px; border: solid 9px #01D42F;">✔</span>
+            </div>
+            <div id="container-quest" style="display: block;">
+                <img id="quest-image" alt="" class="quest-image" src="img_pdd/none.jpg">
+                <div id="quest-block" class="quest">В каком случае водитель совершит вынужденную остановку?</div>
+                <div id="answers-block">
+                    <div id="answer0" class="answer">
+                        <ol start="1">
+                            <li>Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу
+                                пешеходу.
+                            </li>
+                        </ol>
+                    </div>
+                    <div id="answer1" class="answer">
+                        <ol start="2">
+                            <li>Остановившись на проезжей части из-за технической неисправности транспортного
+                                средства.
+                            </li>
+                        </ol>
+                    </div>
+                    <div id="answer2" class="answer">
+                        <ol start="3">
+                            <li>В обоих перечисленных случаях.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="tip-quest" style="display:none;">Под вынужденной остановкой подразумевается прекращение
+                    движения ТС из-за его технической неисправности, опасности, создаваемой перевозимым грузом,
+                    внезапным ухудшением состояния водителя (или пассажира), а также появлением препятствия на дороге
+                    (упавший груз, завал на дороге и т. п.). Остановка, связанная с необходимостью выполнения требования
+                    уступить дорогу, не рассматривается как вынужденная (п. 1.2 ).
+                </div>
+            </div>
+            <div id="container-quests" style="position:relative; z-index:998;"><span
+                    class="quest-number quest-number-active" id="quest-num0">1</span><span class="quest-number"
+                                                                                           id="quest-num1">2</span><span
+                    class="quest-number" id="quest-num2">3</span><span class="quest-number"
+                                                                       id="quest-num3">4</span><span
+                    class="quest-number" id="quest-num4">5</span><span class="quest-number"
+                                                                       id="quest-num5">6</span><span
+                    class="quest-number" id="quest-num6">7</span><span class="quest-number"
+                                                                       id="quest-num7">8</span><span
+                    class="quest-number" id="quest-num8">9</span><span class="quest-number"
+                                                                       id="quest-num9">10</span><span
+                    class="quest-number" id="quest-num10">11</span><span class="quest-number" id="quest-num11">12</span><span
+                    class="quest-number" id="quest-num12">13</span><span class="quest-number" id="quest-num13">14</span><span
+                    class="quest-number" id="quest-num14">15</span><span class="quest-number" id="quest-num15">16</span><span
+                    class="quest-number" id="quest-num16">17</span><span class="quest-number" id="quest-num17">18</span><span
+                    class="quest-number" id="quest-num18">19</span><span class="quest-number" id="quest-num19">20</span>
+            </div>
+        </div>
+    </div>
+    <div id="article">
+        <div><strong>Новые билеты Экзамен ПДД Кыргызстана 2023</strong></div>
+    </div>
+    <div></div>
+</div>
+        <script src="script/site.min.js?ver=1.0"></script>
+        <script src="script/HintsRu.min.js?ver=1.0"></script>
+        <script>
+    var MyTime = 0;
+    var MyWrongs = 0;
+    var MySocialText = "";
+    var category_abmcd = 0;
+    var g_complitequests = 0;
+    var g_pause_active = false;
+    var res_win = 0;
+    var res_score_count_id;
+    var res_score = 0;
+    var res_score_final = 0;
+    var res_star = 0;
+    var g_registered = 0;
+    var g_global_rezim = 5;
+    var q_length = 20;
+    var q_id = [];
+    var q_idb = [];
+    var q_img = [];
+    var q_img_src = [];
+    var q_img_name = [];
+    var q_nq = [];
+    var q_quest = [];
+    var q_tips = [];
+    var q_qnum_id = -1;
+    var a_length = [];
+    var a_t = [];
+    var a_answers = [];
+    var q_nq_done = [];
+    var q_done = false;
+    var q_length_p5 = 0;
+    var q_id_p5 = [];
+    var q_idb_p5 = [];
+    var q_img_p5 = [];
+    var q_img_src_p5 = [];
+    var q_img_name_p5 = [];
+    var q_nq_p5 = [];
+    var q_quest_p5 = [];
+    var q_tips_p5 = [];
+    var q_qnum_id_p5 = -1;
+    var a_length_p5 = [];
+    var a_t_p5 = [];
+    var a_answers_p5 = [];
+    var q_nq_done_p5 = [];
+    var q_done_p5 = false;
+    var g_wrongs = [];
+    var g_wronrs_cur_counter = 0;
+    var g_wrongs_counter = 0;
+    var g_rights_counter = 0;
+    var g_global_update = 1;
+    var q_block_mistake = [];
+    var d_click_answer = 0;
+    var g_mistake = 0;
+    var g_block_p5 = 0;
+    var end_plus_exam = true;
+    var plus_end_mistake = false;
+    for (i = 0; i < q_length; i++) {
+        a_answers[i] = [];
+    }q_id[0] = 1;
+    q_idb[0] = 4;
+    q_img[0] = 1;
+    q_img_name[0] = "7_22.png";
+    q_nq[0] = 1;
+    q_quest[0] = "На каком рисунке изображен автомобиль, водитель которого нарушает правила перевозки грузов?";
+    q_tips[0] = " Правила допускают перевозку груза, если его ширина не превышает 2,50 м (п.23.5). Однако груз должен быть обозначен знаком «Крупногабаритный груз» (ОП, п.8) в случаях, когда он более чем на 0,4 м выступает за внешний край габаритного огня (п.23.4), чего не выполнил водитель автомобиля на рисунке А.";
+    a_t[0] = "0";
+    a_length[0] = "3";
+    a_answers[0][0] = " Только на А.";
+    a_answers[0][1] = " Только на Б.";
+    a_answers[0][2] = " На обоих.";
+    q_id[1] = 2;
+    q_idb[1] = 4   ;
+    q_img[1] = 0;
+    q_img_name[1] = "0";
+    q_nq[1] = 2;
+    q_quest[1] = "Перевозка груза запрещена, если он:";
+    q_tips[1] = " Правила разрешают перевозку груза при условии, что он не закрывает внешние световые приборы и световозвращатели, регистрационные и опознавательные знаки (п.23.3). Можно перевозить груз на сиденье, а груз, выступающий более чем на 1 м спереди или сзади за габариты ТС, только обозначив его знаком «Крупногабаритный груз» (п.23.4).";
+    a_t[1] = "1";
+    a_length[1] = "3";
+    a_answers[1][0] = " Выступает более чем на 1 м за габариты транспортного средства спереди или сзади.";
+    a_answers[1][1] = " Закрывает внешние световые приборы, световозвращатели, регистрационные и опознавательные знаки.";
+    a_answers[1][2] = " Установлен на сиденье для пассажиров.";
+    q_id[2] = 3;
+    q_idb[2] = 4   ;
+    q_img[2] = 0;
+    q_img_name[2] = "0";
+    q_nq[2] = 3;
+    q_quest[2] = "В каких случаях водители мопедов нарушают Правила?";
+    q_tips[2] = " Водителям мопедов, как и велосипедистам, запрещено управлять, не держась хотя бы одной рукой за руль (п.24.3).";
+    a_t[2] = "0";
+    a_length[2] = "3";
+    a_answers[2][0] = " Только если управляют мопедом, не держась за руль хотя бы одной рукой.";
+    a_answers[2][1] = " Только если двигаются по дороге без застегнутого мотошлема.";
+    a_answers[2][2] = " В обоих перечисленных случаях.";
+    q_id[3] = 4;
+    q_idb[3] = 4   ;
+    q_img[3] = 0;
+    q_img_name[3] = "0";
+    q_nq[3] = 4;
+    q_quest[3] = "Водителям мопедов разрешено двигаться:";
+    q_tips[3] = " С учетом конструктивной скорости мопедов (не более 50 км/ч) их водители могут двигаться по велосипедной дорожке, обозначенной знаком 4.4 «Велосипедная дорожка» и разметкой 1.15 (п.1.2 термин «Мопед»), а при ее отсутствии – только в один ряд по правому краю проезжей части или по обочине, не создавая помех пешеходам (п.24.2).";
+    a_t[3] = "3";
+    a_length[3] = "4";
+    a_answers[3][0] = " Только по правому краю проезжей части в один ряд.";
+    a_answers[3][1] = " Только по обочине, если не создаются помехи пешеходам.";
+    a_answers[3][2] = " Только по велосипедной дорожке.";
+    a_answers[3][3] = " Во всех перечисленных случаях.";
+    q_id[4] = 5;
+    q_idb[4] = 4   ;
+    q_img[4] = 0;
+    q_img_name[4] = "0";
+    q_nq[4] = 5;
+    q_quest[4] = "На каких дорогах водителям мопедов запрещается поворачивать налево или разворачиваться?";
+    q_tips[4] = " Поскольку Правила разрешают движение мопедов только по правому краю проезжей части в один ряд (п.24.2), использовать для движения другие полосы нельзя. Поэтому поворачивать налево или разворачиваться на дорогах с трамвайным движением или на дорогах, имеющих более одной полосы для движения в данном направлении, водителям мопедов запрещено (п.24.3).";
+    a_t[4] = "2";
+    a_length[4] = "3";
+    a_answers[4][0] = " На дорогах с трамвайным движением.";
+    a_answers[4][1] = " На дорогах, имеющих более одной полосы для движения в данном направлении.";
+    a_answers[4][2] = " На всех перечисленных дорогах.";
+    q_id[5] = 6;
+    q_idb[5] = 4;
+    q_img[5] = 1;
+    q_img_name[5] = "7_27.png";
+    q_nq[5] = 6;
+    q_quest[5] = "При повороте направо Вы:";
+    q_tips[5] = " Водитель автомобиля с включенными проблесковым маячком синего цвета и специальным звуковым сигналом имеет преимущество перед другими участниками движения (пп.3.1 и 3.2). Значит, Вы должны уступить ему дорогу и только после этого можете повернуть направо, уступая дорогу также и пешеходам (пп.3.3 и 13.1).";
+    a_t[5] = "2";
+    a_length[5] = "3";
+    a_answers[5][0] = " Имеете право проехать перекресток первым.";
+    a_answers[5][1] = " Должны уступить дорогу только пешеходам.";
+    a_answers[5][2] = " Должны уступить дорогу автомобилю с включенными проблесковым маячком и специальным звуковым сигналом, а также пешеходам.";
+    q_id[6] = 7;
+    q_idb[6] = 4   ;
+    q_img[6] = 0;
+    q_img_name[6] = "0";
+    q_nq[6] = 7;
+    q_quest[6] = "Запрещается выполнять обгон одиночного транспортного средства, имеющего нанесенные на наружные поверхности специальные цветографические схемы:";
+    q_tips[6] = " Правила запрещают обгонять ТС, имеющее нанесенные на наружные поверхности специальные цветографические схемы, если на таком ТС включены проблесковый маячок синего цвета или маячки синего и красного цветов, а также специальный звуковой сигнал (п.3.3).";
+    a_t[6] = "2";
+    a_length[6] = "3";
+    a_answers[6][0] = " Только при включении на нем специального звукового сигнала.";
+    a_answers[6][1] = " Только при включении на нем проблесковых маячков синего и красного цветов.";
+    a_answers[6][2] = " При наличии обоих перечисленных условий.";
+    q_id[7] = 8;
+    q_idb[7] = 4;
+    q_img[7] = 1;
+    q_img_name[7] = "7_29.png";
+    q_nq[7] = 8;
+    q_quest[7] = "Как Вы должны поступить в данной ситуации?";
+    q_tips[7] = " Правила предписывают Вам при приближении к стоящему ТС с включенным проблесковым маячком синего цвета снизить скорость и быть готовым при необходимости остановиться (п.3.4).";
+    a_t[7] = "1";
+    a_length[7] = "3";
+    a_answers[7][0] = " Продолжить движение, не изменяя скорости.";
+    a_answers[7][1] = " Снизить скорость и быть готовым в случае необходимости незамедлительно остановиться.";
+    a_answers[7][2] = " Остановиться и продолжить движение только после разрешения сотрудника милиции.";
+    q_id[8] = 9;
+    q_idb[8] = 4;
+    q_img[8] = 1;
+    q_img_name[8] = "7_30.png";
+    q_nq[8] = 9;
+    q_quest[8] = "В данной ситуации водитель автомобиля с включенными проблесковыми маячками:";
+    q_tips[8] = " Водители ТС оперативных служб, выполняющие неотложное служебное задание, при включении проблескового маячка синего цвета могут отступать от требований ряда разделов Правил (п.3.1). В данном случае водитель автомобиля оперативной службы при условии обеспечения безопасности движения может проехать перекресток в любом направлении независимо от требований знака 4.1.4 «Движение прямо или направо» и сигналов светофоров.";
+    a_t[8] = "2";
+    a_length[8] = "3";
+    a_answers[8][0] = " Должен ожидать разрешающего сигнала светофора.";
+    a_answers[8][1] = " Может двигаться только прямо или направо.";
+    a_answers[8][2] = " Может двигаться в любом направлении.";
+    q_id[9] = 10;
+    q_idb[9] = 4   ;
+    q_img[9] = 0;
+    q_img_name[9] = "0";
+    q_nq[9] = 10;
+    q_quest[9] = "В каких случаях необходимо уступить дорогу транспортному средству, имеющему нанесенные на наружные поверхности специальные цветографические схемы?";
+    q_tips[9] = " Вы должны уступить дорогу ТС с нанесенными на наружной поверхности специальными цветографическими схемами только в том случае, если его водитель включил проблесковый маячок синего цвета и специальный звуковой сигнал (п.3.2).";
+    a_t[9] = "0";
+    a_length[9] = "3";
+    a_answers[9][0] = " Если его водитель включил проблесковый маячок синего цвета и специальный звуковой сигнал.";
+    a_answers[9][1] = " Если его водитель включил проблесковый маячок синего цвета.";
+    a_answers[9][2] = " Во всех случаях.";
+    q_id[10] = 11;
+    q_idb[10] = 4;
+    q_img[10] = 1;
+    q_img_name[10] = "7_32.png";
+    q_nq[10] = 11;
+    q_quest[10] = "Как следует поступить водителю легкового автомобиля при приближении автомобиля оперативной службы?";
+    q_tips[10] = " Водитель легкового автомобиля должен обеспечить беспрепятственный проезд автомобиля со специальными цветографическими схемами, имеющего преимущество в движении, так как у него включены проблесковые маячки синего и красного цветов и специальный звуковой сигнал (п.3.3). Для этого достаточно перестроиться на правую полосу проезжей части (п.1.2 термин «Уступить дорогу (не создавать помех)»).";
+    a_t[10] = "1";
+    a_length[10] = "3";
+    a_answers[10][0] = " Продолжить движение по левой полосе.";
+    a_answers[10][1] = " Перестроиться на правую полосу.";
+    a_answers[10][2] = " Остановиться справа у тротуара.";
+    q_id[11] = 12;
+    q_idb[11] = 4   ;
+    q_img[11] = 0;
+    q_img_name[11] = "0";
+    q_nq[11] = 12;
+    q_quest[11] = "Преимущество перед другими участниками движения имеет водитель автомобиля:";
+    q_tips[11] = " Водитель автомобиля имеет преимущество перед другими участниками движения только в том случае, если на его ТС одновременно включены проблесковый маячок синего и (или) красного цвета и специальный звуковой сигнал (п.3.3).";
+    a_t[11] = "2";
+    a_length[11] = "4";
+    a_answers[11][0] = " Только с включенным проблесковым маячком синего цвета.";
+    a_answers[11][1] = " Только с включенным проблесковым маячком оранжевого или желтого цвета.";
+    a_answers[11][2] = " Только с включенными проблесковым маячком синего и (или) красного цвета и специальным звуковым сигналом.";
+    a_answers[11][3] = " Любого из перечисленных.";
+    q_id[12] = 13;
+    q_idb[12] = 4   ;
+    q_img[12] = 0;
+    q_img_name[12] = "0";
+    q_nq[12] = 13;
+    q_quest[12] = "В каких случаях разрешается наезжать на прерывистые линии разметки, разделяющие проезжую часть на полосы движения?";
+    q_tips[12] = " Наезжать на прерывистые линии разметки разрешается только при перестроении (п.9.7).";
+    a_t[12] = "2";
+    a_length[12] = "4";
+    a_answers[12][0] = " Только если на дороге нет других транспортных средств.";
+    a_answers[12][1] = " Только при движении в темное время суток.";
+    a_answers[12][2] = " Только при перестроении.";
+    a_answers[12][3] = " Во всех перечисленных случаях.";
+    q_id[13] = 14;
+    q_idb[13] = 4;
+    q_img[13] = 1;
+    q_img_name[13] = "7_35.png";
+    q_nq[13] = 14;
+    q_quest[13] = "По какой полосе Вы имеете право двигаться с максимально разрешенной скоростью вне населенных пунктов?";
+    q_tips[13] = " Вне населенного пункта запрещается занимать левые полосы при свободных правых (п.9.4). В данной ситуации Вы можете двигаться только по правой полосе независимо от скорости движения.";
+    a_t[13] = "0";
+    a_length[13] = "3";
+    a_answers[13][0] = " Только по правой.";
+    a_answers[13][1] = " Только по левой.";
+    a_answers[13][2] = " По любой.";
+    q_id[14] = 15;
+    q_idb[14] = 4   ;
+    q_img[14] = 0;
+    q_img_name[14] = "0";
+    q_nq[14] = 15;
+    q_quest[14] = "По какой полосе проезжей части разрешено движение в населенном пункте, если по техническим причинам транспортное средство не может развивать скорость более 40 км/ч?";
+    q_tips[14] = " На любых дорогах, если ТС не может развить скорость более 40 км/ч, необходимо двигаться только по крайней правой полосе (п.9.5).";
+    a_t[14] = "0";
+    a_length[14] = "3";
+    a_answers[14][0] = " Только по крайней правой.";
+    a_answers[14][1] = " Не далее второй полосы.";
+    a_answers[14][2] = " По любой, кроме крайней левой.";
+    q_id[15] = 16;
+    q_idb[15] = 4;
+    q_img[15] = 1;
+    q_img_name[15] = "7_37.png";
+    q_nq[15] = 16;
+    q_quest[15] = "Вне населенных пунктов Вам можно продолжить движение:";
+    q_tips[15] = " Вне населенных пунктов запрещается занимать левые полосы движения при свободных правых (п.9.4). В данной ситуации Вам разрешено двигаться только по правой полосе.";
+    a_t[15] = "2";
+    a_length[15] = "3";
+    a_answers[15][0] = " По любой полосе.";
+    a_answers[15][1] = " По правой или средней полосе.";
+    a_answers[15][2] = " Только по правой полосе.";
+    q_id[16] = 17;
+    q_idb[16] = 4;
+    q_img[16] = 1;
+    q_img_name[16] = "7_38.png";
+    q_nq[16] = 17;
+    q_quest[16] = "По какой траектории Вам разрешается продолжить движение?";
+    q_tips[16] = " Вы можете продолжить движение только по траектории Б, так как при повороте на дорогу с реверсивным движением (знак 5.10 «Выезд на дорогу с реверсивным движением») Вы обязаны занять крайнюю правую полосу независимо от количества полос на этой дороге. Перестроение возможно только после того, когда станет ясно, по каким еще полосам возможно движение в данном направлении (п.9.8).";
+    a_t[16] = "1";
+    a_length[16] = "3";
+    a_answers[16][0] = " Только по А.";
+    a_answers[16][1] = " Только по Б.";
+    a_answers[16][2] = " По любой из указанных.";
+    q_id[17] = 18;
+    q_idb[17] = 4   ;
+    q_img[17] = 0;
+    q_img_name[17] = "0";
+    q_nq[17] = 18;
+    q_quest[17] = "В каких случаях разрешается выезжать за пределы правой полосы, если Вы управляете транспортным средством, скорость которого по техническим причинам не может быть более 40 км/ч?";
+    q_tips[17] = " Даже если Ваше ТС не может развить скорость более 40 км/ч, Вам разрешено выехать за пределы правой полосы не только при перестроении перед поворотом налево (разворотом), но и при обгоне или объезде (п.9.5).";
+    a_t[17] = "2";
+    a_length[17] = "3";
+    a_answers[17][0] = " Только при перестроении перед поворотом налево либо разворотом.";
+    a_answers[17][1] = " Только при обгоне или объезде.";
+    a_answers[17][2] = " Во всех перечисленных случаях.";
+    q_id[18] = 19;
+    q_idb[18] = 4   ;
+    q_img[18] = 0;
+    q_img_name[18] = "0";
+    q_nq[18] = 19;
+    q_quest[18] = "Допускается ли движение автомобилей по тротуарам или пешеходным дорожкам?";
+    q_tips[18] = " Тротуары и пешеходные дорожки не предназначены для движения ТС. Однако, как исключение, движение по тротуарам и пешеходным дорожкам разрешается машинам дорожно-эксплуатационных и коммунальных служб (п.9.9). При этом должна быть обеспечена безопасность движения.";
+    a_t[18] = "2";
+    a_length[18] = "3";
+    a_answers[18][0] = " Допускается.";
+    a_answers[18][1] = " Допускается только при доставке грузов к торговым и другим предприятиям, расположенным непосредственно у тротуаров или пешеходных дорожек, если отсутствуют другие возможности подъезда.";
+    a_answers[18][2] = " Не допускается.";
+    q_id[19] = 20;
+    q_idb[19] = 4;
+    q_img[19] = 1;
+    q_img_name[19] = "7_41.png";
+    q_nq[19] = 20;
+    q_quest[19] = "Укажите расстояние, под которым в Правилах понимается дистанция:";
+    q_tips[19] = " Под дистанцией в Правилах понимается расстояние до движущегося впереди ТС (Б). Расстояние между встречными ТС (А) и между попутными ТС (В) именуется боковым интервалом (п.10.5).";
+    a_t[19] = "1";
+    a_length[19] = "4";
+    a_answers[19][0] = " Только А.";
+    a_answers[19][1] = " Только Б.";
+    a_answers[19][2] = " Только В.";
+    a_answers[19][3] = " А и В.";
+    var q_img_l = 0;
+    var q_img_l_load = [];
+    var load_img_id;
+    Start();
+</script>
+</body>
+</html>
